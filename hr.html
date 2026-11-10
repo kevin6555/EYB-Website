@@ -20,15 +20,15 @@
   --navy:#0F1E3D;
   --navy-2:#1B2C52;
   --navy-3:#24375F;
-  --beige:#F3EBDD;
-  --sand:#E7DCC8;
-  --paper:#FBF7F0;
-  --tan:#C9A46B;
-  --tan-deep:#8A6630;
-  --muted:#574D3E;
-  --line:#DCCFB8;
-  --on-navy:#D8CDB8;
-  --on-navy-dim:#A99E8A;
+  --beige:#F5F8FC;
+  --sand:#E4ECF5;
+  --paper:#FFFFFF;
+  --tan:#22D3EE;
+  --tan-deep:#0E7490;
+  --muted:#475569;
+  --line:#D7E0EB;
+  --on-navy:#CBD5E1;
+  --on-navy-dim:#94A3B8;
   --font-display:'Quicksand','Varela Round',system-ui,sans-serif;
   --font-body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
   --font-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
@@ -59,7 +59,7 @@ section{scroll-margin-top:84px}
 
 /* header */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--beige)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(243,235,221,.9);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(245,248,252,.9);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand span{font-family:var(--font-display);font-weight:600;font-size:30px;letter-spacing:-.02em;line-height:1;padding-bottom:4px}
@@ -74,7 +74,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .btn-ghost{background:transparent;color:var(--navy)}
 .btn-ghost:hover{background:var(--sand)}
 .btn-tan{background:var(--tan);border-color:var(--tan);color:var(--navy)}
-.btn-tan:hover{background:#D3B07A}
+.btn-tan:hover{background:#67E8F9}
 @media (max-width:860px){.links a:not(.btn){display:none}.links{gap:12px}.links .btn{min-height:44px;padding:0 16px;font-size:14px}}
 
 /* hero */
@@ -90,13 +90,13 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .hero-note span{display:inline-flex;align-items:center;gap:8px}
 .hero-note svg{width:16px;height:16px}
 
-.panel{position:relative;background:var(--navy);border-radius:28px;padding:16px 22px 26px;max-width:470px;width:100%;justify-self:end;box-shadow:0 40px 80px -40px rgba(15,30,61,.7);background-image:radial-gradient(rgba(243,235,221,.08) 1px,transparent 1px);background-size:18px 18px}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid rgba(243,235,221,.12);font-family:var(--font-mono);font-size:12px;color:var(--on-navy-dim)}
+.panel{position:relative;background:var(--navy);border-radius:28px;padding:16px 22px 26px;max-width:470px;width:100%;justify-self:end;box-shadow:0 40px 80px -40px rgba(15,30,61,.7);background-image:radial-gradient(rgba(245,248,252,.08) 1px,transparent 1px);background-size:18px 18px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid rgba(245,248,252,.12);font-family:var(--font-mono);font-size:12px;color:var(--on-navy-dim)}
 .bar .lights{display:flex;gap:6px}
 .bar .lights i{width:9px;height:9px;border-radius:50%;background:var(--navy-3)}
 .live{display:inline-flex;align-items:center;gap:6px;color:var(--tan)}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--tan);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(201,164,107,.6)}70%{box-shadow:0 0 0 8px rgba(201,164,107,0)}100%{box-shadow:0 0 0 0 rgba(201,164,107,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.6)}70%{box-shadow:0 0 0 8px rgba(34,211,238,0)}100%{box-shadow:0 0 0 0 rgba(34,211,238,0)}}
 .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .tile{all:unset;box-sizing:border-box;cursor:pointer;background:var(--beige);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0;aspect-ratio:1/1;position:relative;transition:transform .2s ease,box-shadow .2s ease;color:var(--navy)}
 .tile:hover{transform:translateY(-4px);box-shadow:0 14px 26px -12px rgba(0,0,0,.5)}
@@ -148,11 +148,11 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 
 /* modules */
 .modules{background:var(--navy);color:var(--beige);position:relative;overflow:hidden}
-.modules::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(243,235,221,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.modules::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
 .modules .wrap{position:relative}
 .tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:28px}
-.tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;border:1px solid rgba(243,235,221,.14);background:rgba(243,235,221,.04);transition:background .2s ease,border-color .2s ease}
-.tab:hover{background:rgba(243,235,221,.08)}
+.tab{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;border:1px solid rgba(245,248,252,.14);background:rgba(245,248,252,.04);transition:background .2s ease,border-color .2s ease}
+.tab:hover{background:rgba(245,248,252,.08)}
 .tab:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
 .tab .ti{width:36px;height:36px;border-radius:10px;background:var(--navy-3);display:grid;place-items:center;flex:none}
 .tab .ti svg{width:18px;height:18px}
@@ -162,25 +162,25 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .tab[aria-selected="true"] .ti{background:var(--navy)}
 .tab[aria-selected="true"] small{color:var(--muted)}
 .tab.ai[aria-selected="true"]{background:var(--tan);border-color:var(--tan)}
-.pane{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;background:var(--navy-2);border:1px solid rgba(243,235,221,.12);border-radius:24px;padding:40px}
+.pane{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;background:var(--navy-2);border:1px solid rgba(245,248,252,.12);border-radius:24px;padding:40px}
 .pane h3{font-size:clamp(24px,3vw,32px)}
 .pane .sum{margin-top:12px;color:var(--on-navy);font-size:17px;max-width:52ch}
 .feats{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px}
 .feats li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--beige)}
 .feats svg{flex:none;margin-top:4px}
-.outcome{margin-top:28px;display:flex;gap:12px;align-items:flex-start;background:rgba(201,164,107,.12);border:1px solid rgba(201,164,107,.35);border-radius:14px;padding:16px 18px}
+.outcome{margin-top:28px;display:flex;gap:12px;align-items:flex-start;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.35);border-radius:14px;padding:16px 18px}
 .outcome span{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tan);white-space:nowrap;padding-top:2px}
 .outcome p{color:var(--beige);font-weight:600}
 .pane .cta-row{margin-top:28px}
-.mock{background:var(--navy);border:1px solid rgba(243,235,221,.12);border-radius:18px;overflow:hidden;align-self:start;font-family:var(--font-mono);font-size:12.5px}
-.mock-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(243,235,221,.1);color:var(--on-navy-dim)}
+.mock{background:var(--navy);border:1px solid rgba(245,248,252,.12);border-radius:18px;overflow:hidden;align-self:start;font-family:var(--font-mono);font-size:12.5px}
+.mock-top{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(245,248,252,.1);color:var(--on-navy-dim)}
 .mock-body{padding:8px 16px 16px;display:grid}
-.mrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed rgba(243,235,221,.1);color:var(--beige)}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px dashed rgba(245,248,252,.1);color:var(--beige)}
 .mrow:last-child{border-bottom:0}
-.pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:rgba(243,235,221,.1);color:var(--on-navy)}
-.pill.ok{background:rgba(201,164,107,.2);color:var(--tan)}
+.pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;background:rgba(245,248,252,.1);color:var(--on-navy)}
+.pill.ok{background:rgba(34,211,238,.2);color:var(--tan)}
 .pill.warn{background:var(--tan);color:var(--navy)}
-.meter{height:6px;border-radius:3px;background:rgba(243,235,221,.1);margin-top:8px;overflow:hidden}
+.meter{height:6px;border-radius:3px;background:rgba(245,248,252,.1);margin-top:8px;overflow:hidden}
 .meter i{display:block;height:100%;background:var(--beige);border-radius:3px}
 .meter i.low{background:var(--tan)}
 .bubble{max-width:88%;padding:10px 12px;border-radius:12px;line-height:1.45;margin-top:10px}
@@ -201,13 +201,13 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 @media (max-width:600px){.services{grid-template-columns:minmax(0,1fr)}}
 
 /* work */
-.work{background:var(--navy);color:var(--beige);border-radius:28px;padding:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;background-image:radial-gradient(rgba(243,235,221,.07) 1px,transparent 1px);background-size:20px 20px}
+.work{background:var(--navy);color:var(--beige);border-radius:28px;padding:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:20px 20px}
 .work h2{margin-top:14px}
 .facts{display:grid;gap:12px;align-content:start}
-.fact{border:1px solid rgba(243,235,221,.16);background:rgba(15,30,61,.6);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:baseline}
+.fact{border:1px solid rgba(245,248,252,.16);background:rgba(15,30,61,.6);border-radius:14px;padding:16px 18px;display:grid;grid-template-columns:120px minmax(0,1fr);gap:12px;align-items:baseline}
 .fact span{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tan);font-weight:600}
 .fact b{font-weight:600;font-size:16px}
-.placeholder{background:rgba(201,164,107,.18);border:1px dashed var(--tan);border-radius:8px;padding:2px 8px;font-style:normal}
+.placeholder{background:rgba(34,211,238,.18);border:1px dashed var(--tan);border-radius:8px;padding:2px 8px;font-style:normal}
 @media (max-width:860px){.work{grid-template-columns:minmax(0,1fr);padding:30px 22px}.fact{grid-template-columns:minmax(0,1fr);gap:2px}}
 
 /* steps */
@@ -230,7 +230,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 .pack.mid{background:var(--navy);color:var(--beige);border-color:var(--navy)}
 .pack.mid .for{color:var(--on-navy)}
 .pack.mid .id{color:var(--tan)}
-.pack.mid ul{border-top-color:rgba(243,235,221,.16)}
+.pack.mid ul{border-top-color:rgba(245,248,252,.16)}
 .pack.mid li path{stroke:var(--tan)}
 @media (max-width:860px){.packs{grid-template-columns:minmax(0,1fr)}}
 .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:56px;padding-top:40px;border-top:1px solid var(--line)}
@@ -243,16 +243,16 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 
 /* contact */
 .contact{background:var(--navy);color:var(--beige);padding-block:96px;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(243,235,221,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.contact::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
 .contact-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:center}
 .contact h2{margin-top:14px}
 .contact .lead{margin-top:16px}
-.card{background:var(--navy-2);border:1px solid rgba(243,235,221,.12);border-radius:20px;padding:26px;display:grid;gap:18px}
+.card{background:var(--navy-2);border:1px solid rgba(245,248,252,.12);border-radius:20px;padding:26px;display:grid;gap:18px}
 .row{display:flex;flex-direction:column;gap:2px}
 .row span{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tan);font-weight:600}
 .row b{font-size:18px;font-weight:600;user-select:all;overflow-wrap:anywhere}
 @media (max-width:860px){.contact-grid{grid-template-columns:minmax(0,1fr)}}
-footer{background:var(--navy);color:var(--on-navy-dim);border-top:1px solid rgba(243,235,221,.1);font-size:14px}
+footer{background:var(--navy);color:var(--on-navy-dim);border-top:1px solid rgba(245,248,252,.1);font-size:14px}
 .foot{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px;padding-block:48px 28px}
 .foot h4{margin:0 0 12px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--tan);font-weight:600}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -260,7 +260,7 @@ footer{background:var(--navy);color:var(--on-navy-dim);border-top:1px solid rgba
 .foot a:hover{color:var(--beige)}
 .foot .fb{display:flex;flex-direction:column;gap:12px}
 .foot .fb .brand span{color:var(--beige)}
-.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:20px 28px;border-top:1px solid rgba(243,235,221,.1);font-family:var(--font-mono);font-size:12px}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:20px 28px;border-top:1px solid rgba(245,248,252,.1);font-family:var(--font-mono);font-size:12px}
 @media (max-width:860px){.foot{grid-template-columns:repeat(2,minmax(0,1fr))}.foot .fb{grid-column:1/-1}}
 
 /* ---- section separation ---- */
@@ -270,14 +270,14 @@ footer{background:var(--navy);color:var(--on-navy-dim);border-top:1px solid rgba
 
 /* ---- home: module cards ---- */
 .mod-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.mod-card{display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--navy-2);border:1px solid rgba(243,235,221,.12);text-decoration:none;color:var(--beige);transition:transform .2s ease,border-color .2s ease,background .2s ease;min-width:0}
+.mod-card{display:flex;flex-direction:column;gap:14px;padding:26px;border-radius:20px;background:var(--navy-2);border:1px solid rgba(245,248,252,.12);text-decoration:none;color:var(--beige);transition:transform .2s ease,border-color .2s ease,background .2s ease;min-width:0}
 .mod-card:hover{transform:translateY(-4px);border-color:var(--tan);background:var(--navy-3)}
 .mi{width:46px;height:46px;border-radius:12px;background:var(--beige);display:grid;place-items:center;flex:none}
 .mi svg{width:22px;height:22px}
 .mod-card.ai .mi{background:var(--tan)}
 .mod-card .tagline{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;color:var(--on-navy-dim)}
 .mod-card p{font-size:15px;color:var(--on-navy)}
-.mod-card ul{list-style:none;margin:0;padding:14px 0 0;border-top:1px dashed rgba(243,235,221,.14);display:grid;gap:6px;font-family:var(--font-mono);font-size:12.5px;color:var(--beige)}
+.mod-card ul{list-style:none;margin:0;padding:14px 0 0;border-top:1px dashed rgba(245,248,252,.14);display:grid;gap:6px;font-family:var(--font-mono);font-size:12.5px;color:var(--beige)}
 .mod-card li::before{content:"+ ";color:var(--tan)}
 .mod-card .more{margin-top:auto;padding-top:6px;font-family:var(--font-mono);font-size:13px;font-weight:600;color:var(--tan);display:inline-flex;align-items:center;gap:6px}
 .mod-card:hover .more svg{transform:translateX(4px)}
@@ -379,7 +379,7 @@ a.tile{text-decoration:none}
 .brand .tagl{display:block;margin-left:8px;padding:2px 0 2px 14px;border-left:1.5px solid var(--line);font-family:var(--font-mono);font-size:9.5px;font-weight:600;letter-spacing:.16em;line-height:1.5;text-transform:uppercase;color:var(--tan-deep);white-space:nowrap}
 @media (max-width:520px){header .brand .tagl{display:none}}
 /* "and more" strip in the hero panel */
-.more-strip{margin-top:16px;display:flex;align-items:center;gap:12px;background:rgba(243,235,221,.05);border:1px dashed rgba(243,235,221,.22);border-radius:14px;padding:10px 12px;overflow:hidden}
+.more-strip{margin-top:16px;display:flex;align-items:center;gap:12px;background:rgba(245,248,252,.05);border:1px dashed rgba(245,248,252,.22);border-radius:14px;padding:10px 12px;overflow:hidden}
 .ms-label{flex:none;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tan)}
 .ms-track{overflow:hidden;flex:1;min-width:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .ms-row{display:flex;gap:8px;width:max-content;animation:marq 26s linear infinite}
@@ -405,14 +405,14 @@ a.tile{text-decoration:none}
 .sign .av{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--beige);display:grid;place-items:center;font-family:var(--font-mono);font-weight:600;font-size:15px}
 .sign b{display:block;font-family:var(--font-display);font-size:17px}
 .sign small{display:block;font-family:var(--font-mono);font-size:12px;color:var(--muted)}
-.gap-viz{background:var(--navy);border-radius:28px;padding:28px;background-image:radial-gradient(rgba(243,235,221,.08) 1px,transparent 1px);background-size:18px 18px;display:flex;flex-direction:column;gap:18px;box-shadow:0 40px 80px -40px rgba(15,30,61,.7)}
+.gap-viz{background:var(--navy);border-radius:28px;padding:28px;background-image:radial-gradient(rgba(245,248,252,.08) 1px,transparent 1px);background-size:18px 18px;display:flex;flex-direction:column;gap:18px;box-shadow:0 40px 80px -40px rgba(15,30,61,.7)}
 .gap-label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-dim)}
 .scatter{display:flex;flex-wrap:wrap;gap:10px}
 .chip-s{font-family:var(--font-mono);font-size:12px;background:var(--beige);color:var(--navy);padding:8px 12px;border-radius:10px;transform:rotate(var(--r));box-shadow:0 6px 12px -6px rgba(0,0,0,.5)}
 .chip-s.warn{background:var(--tan)}
 .gap-arrow{display:flex;align-items:center;gap:10px;color:var(--tan);font-family:var(--font-mono);font-size:12px}
-.gap-arrow::before,.gap-arrow::after{content:"";flex:1;border-top:1px dashed rgba(243,235,221,.2)}
-.one{display:flex;align-items:center;gap:14px;background:var(--navy-2);border:1px solid rgba(201,164,107,.45);border-radius:18px;padding:16px 18px}
+.gap-arrow::before,.gap-arrow::after{content:"";flex:1;border-top:1px dashed rgba(245,248,252,.2)}
+.one{display:flex;align-items:center;gap:14px;background:var(--navy-2);border:1px solid rgba(34,211,238,.45);border-radius:18px;padding:16px 18px}
 .one b{display:block;font-family:var(--font-display);font-size:19px;color:var(--beige)}
 .one small{display:block;font-family:var(--font-mono);font-size:12px;color:var(--on-navy-dim)}
 @media (max-width:900px){.about-grid{grid-template-columns:minmax(0,1fr)}}
@@ -422,8 +422,8 @@ a.tile{text-decoration:none}
 .service.more-card{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;background:transparent;border:1.5px dashed var(--tan-deep)}
 .service.more-card p{margin-top:6px}
 
-.btn-ghost-light{background:transparent;color:var(--beige);border-color:rgba(243,235,221,.45)}
-.btn-ghost-light:hover{background:rgba(243,235,221,.08)}
+.btn-ghost-light{background:transparent;color:var(--beige);border-color:rgba(245,248,252,.45)}
+.btn-ghost-light:hover{background:rgba(245,248,252,.08)}
 .legal-links{display:flex;flex-wrap:wrap;gap:18px}
 .legal-links a{text-decoration:none}
 .legal-links a:hover{color:var(--beige)}
@@ -464,7 +464,7 @@ fieldset.q-card{margin:0;min-width:0}
 .field .opt{font-weight:500;color:var(--muted);font-size:13px}
 .field input,.field select,.field textarea{font:inherit;font-size:15px;color:var(--navy);background:var(--beige);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;min-height:48px;width:100%}
 .field textarea{min-height:110px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(201,164,107,.35)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(34,211,238,.35)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips label{position:relative;cursor:pointer}
 .chips input{position:absolute;opacity:0;pointer-events:none}
@@ -475,7 +475,7 @@ fieldset.q-card{margin:0;min-width:0}
 .q-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .q-msg{font-size:14px;color:var(--muted)}
 .q-msg.show{display:block;background:var(--paper);border:1px dashed var(--tan-deep);border-radius:12px;padding:12px 14px;color:var(--navy)}
-.q-side{position:sticky;top:110px;background:var(--navy);color:var(--beige);border-radius:22px;padding:26px;display:grid;gap:14px;background-image:radial-gradient(rgba(243,235,221,.08) 1px,transparent 1px);background-size:18px 18px}
+.q-side{position:sticky;top:110px;background:var(--navy);color:var(--beige);border-radius:22px;padding:26px;display:grid;gap:14px;background-image:radial-gradient(rgba(245,248,252,.08) 1px,transparent 1px);background-size:18px 18px}
 .q-side p{color:var(--on-navy);font-size:15px}
 .q-side ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .q-side li{display:flex;gap:10px;font-size:15px}
@@ -483,6 +483,18 @@ fieldset.q-card{margin:0;min-width:0}
 .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 @media (max-width:900px){.q-wrap{grid-template-columns:minmax(0,1fr)}.q-side{position:static}}
 @media (max-width:560px){.q-grid{grid-template-columns:minmax(0,1fr)}.q-card{padding:20px}}
+
+/* ===== navy + cyan design ===== */
+.band{border-top:1px solid #C3CEDC}
+.band.alt{background:#E9EFF6}
+.band-navy{border-top:4px solid #22D3EE}
+.tile{background:#F5F8FC}
+.tile.last{background:#22D3EE}
+.tile.last .go{background:rgba(15,30,61,.14)}
+.tile.last .t-foot{color:#0F1E3D}
+.tile.last .chip{background:#0F1E3D}
+.hero h1 em{color:#0E7490}
+footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 
 .nav-right{display:flex;align-items:center;gap:12px}
 .cta-s{display:none}
@@ -506,11 +518,11 @@ fieldset.q-card{margin:0;min-width:0}
 <header>
   <div class="wrap nav">
     <div class="nav-left">
-      <a class="brand" href="index.html" aria-label="EYB, Elevate Your Business, home"><svg width="38" height="38" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#0F1E3D"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#F3EBDD"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#F3EBDD"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#F3EBDD"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#C9A46B" transform="rotate(14 136 136)"/></svg><span class="word">eyb</span><small class="tagl">Elevate your<br>business</small></a>
+      <a class="brand" href="index.html" aria-label="EYB, Elevate Your Business, home"><svg width="38" height="38" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#0F1E3D"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg><span class="word">eyb</span><small class="tagl">Elevate your<br>business</small></a>
       <nav class="links" aria-label="Main">
         <div class="menu-wrap">
           <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mod-menu">Modules <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <div class="menu" id="mod-menu" hidden><a href="sales.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span><b>Sales</b><small>CRM, pipeline, sales log and follow-ups.</small></span></a><a href="stock.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span><b>Stock</b><small>Live stock, smart purchasing and supplier comparison.</small></span></a><a href="hr.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span><b>HR</b><small>Employees, attendance, leave and payroll.</small></span></a><a href="ai.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span><b>AI</b><small>Bottleneck detection, assistants and automatic reports.</small></span></a><a class="custom" href="#contact"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span><b>Custom modules</b><small>Production, projects, finance and anything else your business needs, built for you.</small></span></a></div>
+          <div class="menu" id="mod-menu" hidden><a href="sales.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span><b>Sales</b><small>CRM, pipeline, sales log and follow-ups.</small></span></a><a href="stock.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span><b>Stock</b><small>Live stock, smart purchasing and supplier comparison.</small></span></a><a href="hr.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span><b>HR</b><small>Employees, attendance, leave and payroll.</small></span></a><a href="ai.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span><b>AI</b><small>Bottleneck detection, assistants and automatic reports.</small></span></a><a class="custom" href="https://wa.me/96181219712?text=Hello%20EYB%2C%20I%20need%20a%20custom%20module%20for%20my%20business%3A" target="_blank" rel="noopener"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span><b>Custom modules</b><small>Production, projects, finance and anything else your business needs, built for you.</small></span></a></div>
         </div>
         <a href="index.html#services">Services</a>
         <a href="index.html#work">Our work</a>
@@ -518,7 +530,7 @@ fieldset.q-card{margin:0;min-width:0}
         <a href="about.html">About us</a>
       </nav>
     </div>
-    <div class="nav-right"><details class="lang-dd"><summary aria-label="Language"><svg class="globe" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.3" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.7c1.8 1.9 2.6 4 2.6 6.3S9.8 12.4 8 14.3C6.2 12.4 5.4 10.3 5.4 8S6.2 3.6 8 1.7z" stroke="currentColor" stroke-width="1.4"/></svg>EN<svg class="chev" width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="lang-menu"><a href="hr.html" hreflang="en" lang="en" dir="ltr" aria-current="page">English<small>EN</small></a><a href="ar/hr.html" hreflang="ar" lang="ar" dir="rtl">العربية<small>AR</small></a><a href="fr/hr.html" hreflang="fr" lang="fr" dir="ltr">Français<small>FR</small></a></div></details><a class="btn btn-solid nav-cta" href="#contact"><span class="cta-l">Book a demo</span><span class="cta-s">Demo</span></a></div>
+    <div class="nav-right"><details class="lang-dd"><summary aria-label="Language"><svg class="globe" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.3" stroke="currentColor" stroke-width="1.4"/><path d="M1.8 8h12.4M8 1.7c1.8 1.9 2.6 4 2.6 6.3S9.8 12.4 8 14.3C6.2 12.4 5.4 10.3 5.4 8S6.2 3.6 8 1.7z" stroke="currentColor" stroke-width="1.4"/></svg>EN<svg class="chev" width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="lang-menu"><a href="hr.html" hreflang="en" lang="en" dir="ltr" aria-current="page">English<small>EN</small></a><a href="ar/hr.html" hreflang="ar" lang="ar" dir="rtl">العربية<small>AR</small></a><a href="fr/hr.html" hreflang="fr" lang="fr" dir="ltr">Français<small>FR</small></a></div></details><a class="btn btn-solid nav-cta" href="https://wa.me/96181219712?text=Hello%20EYB%2C%20I%27d%20like%20to%20book%20a%20free%20demo." target="_blank" rel="noopener"><span class="cta-l">Book a demo</span><span class="cta-s">Demo</span></a></div>
   </div>
 </header>
 <main id="top">
@@ -527,11 +539,11 @@ fieldset.q-card{margin:0;min-width:0}
       <nav class="crumb" aria-label="Breadcrumb"><a href="index.html">eyb</a><span>/</span><span>modules</span><span>/</span><span aria-current="page">hr</span></nav>
       <div class="m-grid">
         <div>
-          <div class="m-title"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="eyebrow">Module · team + payroll</span></div>
+          <div class="m-title"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="eyebrow">Module · team + payroll</span></div>
           <h1 style="margin-top:18px">HR</h1>
           <p class="lead">Your team's files, attendance, leave and payroll in one place, with each person seeing only what they should.</p>
           <div class="cta-row">
-            <a class="btn btn-solid" href="#contact">See HR in a demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-solid" href="https://wa.me/96181219712?text=Hello%20EYB%2C%20I%27d%20like%20to%20see%20the%20HR%20module%20in%20a%20demo." target="_blank" rel="noopener">See HR in a demo <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
             <button class="btn btn-ghost" type="button" data-open-modules>All modules</button>
           </div>
         </div>
@@ -550,21 +562,21 @@ fieldset.q-card{margin:0;min-width:0}
   <section class="section band alt" aria-labelledby="inc-h">
     <div class="wrap">
       <div class="head"><span class="eyebrow">What's included</span><h2 id="inc-h">Everything in the HR module</h2></div>
-      <div class="feat-grid"><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Employee files</h3><p>Contracts, IDs and documents for each employee, in one secure place.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Attendance and shifts</h3><p>Record attendance and shifts, and see who is in at a glance.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Leave management</h3><p>Employees request leave, managers approve, and balances update on their own.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Payroll</h3><p>Salaries calculated from attendance, overtime and deductions.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Salary slips</h3><p>Generate a salary slip for each employee and send it to them.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Roles and permissions</h3><p>Each person sees only what their job needs.</p></div></div>
+      <div class="feat-grid"><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Employee files</h3><p>Contracts, IDs and documents for each employee, in one secure place.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Attendance and shifts</h3><p>Record attendance and shifts, and see who is in at a glance.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Leave management</h3><p>Employees request leave, managers approve, and balances update on their own.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Payroll</h3><p>Salaries calculated from attendance, overtime and deductions.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Salary slips</h3><p>Generate a salary slip for each employee and send it to them.</p></div><div class="feat"><span class="fi"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Roles and permissions</h3><p>Each person sees only what their job needs.</p></div></div>
     </div>
   </section>
 
   <section class="section band" aria-labelledby="ba-h">
     <div class="wrap">
       <div class="head"><span class="eyebrow">The difference</span><h2 id="ba-h">How it changes your day</h2></div>
-      <div class="ba"><div class="ba-row ba-head"><div>Today</div><div>With EYB HR</div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#574D3E" stroke-width="1.8" stroke-linecap="round"/></svg><span>Team information spread across files and messages</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#8A6630" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Everything about your team in one place</span></div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#574D3E" stroke-width="1.8" stroke-linecap="round"/></svg><span>Payroll taking days to prepare</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#8A6630" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Payroll prepared straight from attendance</span></div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#574D3E" stroke-width="1.8" stroke-linecap="round"/></svg><span>Leave requests lost in chats</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#8A6630" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Leave requests approved in a few clicks</span></div></div></div>
+      <div class="ba"><div class="ba-row ba-head"><div>Today</div><div>With EYB HR</div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/></svg><span>Team information spread across files and messages</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Everything about your team in one place</span></div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/></svg><span>Payroll taking days to prepare</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Payroll prepared straight from attendance</span></div></div><div class="ba-row"><div><svg class="x" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#475569" stroke-width="1.8" stroke-linecap="round"/></svg><span>Leave requests lost in chats</span></div><div><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Leave requests approved in a few clicks</span></div></div></div>
     </div>
   </section>
 
   <section class="section band alt" aria-labelledby="oth-h">
     <div class="wrap">
       <div class="head"><span class="eyebrow">Connected</span><h2 id="oth-h">Works with the other modules</h2><p class="lead">Same data, same system. Add any of these whenever you're ready.</p></div>
-      <div class="others"><a class="other" href="sales.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span><b>Sales</b><small>leads → deals</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="other" href="stock.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F3EBDD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span><b>Stock</b><small>warehouse + purchasing</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="other ai" href="ai.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span><b>AI</b><small>automation layer</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+      <div class="others"><a class="other" href="sales.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span><b>Sales</b><small>leads → deals</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="other" href="stock.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span><b>Stock</b><small>warehouse + purchasing</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="other ai" href="ai.html"><span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span><span><b>AI</b><small>automation layer</small></span><span class="arr"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
     </div>
   </section>
 
@@ -590,8 +602,8 @@ fieldset.q-card{margin:0;min-width:0}
 <footer>
   <div class="wrap foot">
     <div class="fb">
-      <a class="brand" href="index.html" aria-label="EYB home"><svg width="34" height="34" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#F3EBDD"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#0F1E3D"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#0F1E3D"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#0F1E3D"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#C9A46B" transform="rotate(14 136 136)"/></svg><span>eyb</span></a>
-      <p>Elevate Your Business. Custom ERP, AI and web systems for growing companies.</p>
+      <a class="brand" href="index.html" aria-label="EYB home"><svg width="34" height="34" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#1B2C52"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg><span class="word">eyb</span><small class="tagl">Elevate your<br>business</small></a>
+      <p>Custom ERP, AI and web systems for growing companies.</p>
     </div>
     <div><h4>Modules</h4><ul><li><a href="sales.html">Sales</a></li><li><a href="stock.html">Stock</a></li><li><a href="hr.html">HR</a></li><li><a href="ai.html">AI</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="index.html#services">Services</a></li><li><a href="about.html">About us</a></li><li><a href="index.html#work">Case study</a></li><li><a href="index.html#how">Process</a></li><li><a href="index.html#packages">Packages</a></li><li><a href="faq.html">FAQ</a></li><li><a href="start.html">Project questionnaire</a></li></ul></div>

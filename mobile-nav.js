@@ -56,23 +56,39 @@
   head.appendChild(closeBtn);
   panel.appendChild(head);
 
-  /* modules, copied from the desktop "Modules" dropdown */
+  var main = el('nav', 'mnav-links');
+  main.setAttribute('aria-label', T.menu);
+
+  /* "Modules" row that expands to show the modules (copied from the desktop dropdown) */
   var modMenu = document.getElementById('mod-menu');
   var modBtn = links.querySelector('.menu-btn');
+  var accBtn = null, mods = null;
   if (modMenu){
-    panel.appendChild(el('span', 'mnav-label', '')).textContent = modBtn ? modBtn.textContent.trim() : 'Modules';
-    var mods = el('div', 'mnav-mods');
+    accBtn = el('button', 'mnav-acc');
+    accBtn.type = 'button';
+    accBtn.setAttribute('aria-expanded', 'false');
+    accBtn.setAttribute('aria-controls', 'mnav-mods');
+    accBtn.appendChild(el('span')).textContent = modBtn ? modBtn.textContent.trim() : 'Modules';
+    accBtn.appendChild(el('span', '', '<svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'));
+    mods = el('div', 'mnav-mods');
+    mods.id = 'mnav-mods';
+    mods.hidden = true;
     modMenu.querySelectorAll('a').forEach(function(a){
       var c = a.cloneNode(true);
       if (isHere(c)) c.setAttribute('aria-current', 'page');
       mods.appendChild(c);
     });
-    panel.appendChild(mods);
+    accBtn.addEventListener('click', function(){ setMods(mods.hidden); });
+    main.appendChild(accBtn);
+    main.appendChild(mods);
+  }
+  function setMods(o){
+    if (!mods) return;
+    mods.hidden = !o;
+    accBtn.setAttribute('aria-expanded', o ? 'true' : 'false');
   }
 
   /* the other header links, plus FAQ from the footer */
-  var main = el('nav', 'mnav-links');
-  main.setAttribute('aria-label', T.menu);
   var seen = {};
   function addLink(a){
     var href = a.getAttribute('href');
@@ -127,8 +143,9 @@
       var dd = header.querySelector('.lang-dd[open]');
       if (dd) dd.removeAttribute('open');
       setTimeout(function(){ closeBtn.focus({preventScroll: true}); }, 30);
-    } else if (!keepFocus){
-      btn.focus({preventScroll: true});
+    } else {
+      setMods(false);
+      if (!keepFocus) btn.focus({preventScroll: true});
     }
   }
   btn.addEventListener('click', function(){ setOpen(!isOpen()); });
@@ -157,6 +174,7 @@
     if (!t || !mq.matches) return;
     e.preventDefault();
     e.stopImmediatePropagation();
+    setMods(true);
     setOpen(true);
   }, true);
 })();

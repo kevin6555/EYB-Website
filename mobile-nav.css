@@ -6,9 +6,28 @@
 @media (max-width:860px){
   /* only swap the header links out once the script has built the panel */
   .has-mnav header .links{display:none}
+  /* "Book a demo" lives in the menu panel on phones, so hide it from the top bar */
+  .has-mnav header .nav-cta{display:none}
   .has-mnav .mnav-btn{display:inline-grid}
   .has-mnav .mnav,.has-mnav .mnav-scrim{display:block}
   .nav-left{gap:12px}
+}
+
+/* keep the "Elevate your business" tagline next to the logo on phones */
+@media (max-width:520px){
+  header .brand .tagl{display:block;margin-left:6px;padding-left:10px;font-size:9px;letter-spacing:.12em}
+  /* Arabic: no letter spacing (it breaks joined letters) and room between the two lines */
+  html[dir=rtl] header .brand .tagl{margin:0 6px 0 0;padding:0 10px 0 0;font-family:inherit;font-size:11px;letter-spacing:0;line-height:1.7;padding-block:0}
+}
+/* smallest iPhones (SE 1st gen, 320px): shrink the logo row a little so it all fits */
+@media (max-width:360px){
+  .nav-left{gap:8px}
+  header .mnav-btn{width:40px;height:40px}
+  header .brand{gap:8px}
+  header .brand svg{width:32px;height:32px}
+  header .brand span{font-size:25px}
+  header .brand .tagl{font-size:8px;letter-spacing:.06em;margin-left:4px;padding-left:8px}
+  html[dir=rtl] header .brand .tagl{margin:0 4px 0 0;padding:0 8px 0 0;font-size:11px}
 }
 
 .mnav-btn{place-items:center;flex:none;width:44px;height:44px;padding:0;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--navy);cursor:pointer;-webkit-tap-highlight-color:transparent}

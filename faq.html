@@ -513,6 +513,7 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 @media (max-width:640px){.lang-dd summary .globe{display:none}.lang-dd summary{padding:0 10px}}
 @media (max-width:480px){.cta-l{display:none}.cta-s{display:inline}.nav-cta{padding:0 14px}.nav-left{gap:12px}.nav-right{gap:8px}}
 </style>
+<link rel="stylesheet" href="mobile-nav.css">
 </head>
 <body>
 <header>
@@ -556,8 +557,8 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
         </div>
       </div>
       <div class="card">
-        <div class="row"><span>WhatsApp</span><b>+961 81 219 712</b></div>
-        <div class="row"><span>Email</span><b>support@eybsystems.com</b></div>
+        <div class="row"><span>WhatsApp</span><b><a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">+961 81 219 712</a></b></div>
+        <div class="row"><span>Email</span><b><a href="mailto:support@eybsystems.com">support@eybsystems.com</a></b></div>
         <div class="row"><span>Location</span><b>Lebanon</b></div>
       </div>
     </div>
@@ -571,7 +572,7 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
     </div>
     <div><h4>Modules</h4><ul><li><a href="sales.html">Sales</a></li><li><a href="stock.html">Stock</a></li><li><a href="hr.html">HR</a></li><li><a href="ai.html">AI</a></li></ul></div>
     <div><h4>Company</h4><ul><li><a href="index.html#services">Services</a></li><li><a href="about.html">About us</a></li><li><a href="index.html#work">Case study</a></li><li><a href="index.html#how">Process</a></li><li><a href="index.html#packages">Packages</a></li><li><a href="faq.html">FAQ</a></li><li><a href="start.html">Project questionnaire</a></li></ul></div>
-    <div><h4>Contact</h4><ul><li>+961 81 219 712</li><li>support@eybsystems.com</li><li>Lebanon</li></ul></div>
+    <div><h4>Contact</h4><ul><li><a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">+961 81 219 712</a></li><li><a href="mailto:support@eybsystems.com">support@eybsystems.com</a></li><li>Lebanon</li></ul></div>
   </div>
   <div class="wrap legal"><span>© 2026 EYB. All rights reserved.</span><span class="legal-links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><span>eybsystems.com</span></span></div>
 </footer>
@@ -597,5 +598,6 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') document.querySelectorAll('details.lang-dd[open]').forEach(function(d){ d.removeAttribute('open'); });
 });
 </script>
+<script src="mobile-nav.js"></script>
 </body>
 </html>

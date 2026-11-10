@@ -1,0 +1,81 @@
+/* Phone menu: a ☰ button in the header opens a side panel with every link.
+   Shared by all pages; the panel itself is built by mobile-nav.js. */
+
+.mnav-btn,.mnav,.mnav-scrim{display:none}
+
+@media (max-width:860px){
+  /* only swap the header links out once the script has built the panel */
+  .has-mnav header .links{display:none}
+  .has-mnav .mnav-btn{display:inline-grid}
+  .has-mnav .mnav,.has-mnav .mnav-scrim{display:block}
+  .nav-left{gap:12px}
+}
+
+.mnav-btn{place-items:center;flex:none;width:44px;height:44px;padding:0;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--navy);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.mnav-btn:hover{border-color:var(--navy)}
+.mnav-btn:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+.mnav-btn svg{width:20px;height:20px}
+
+/* dimmed background behind the panel */
+.mnav-scrim{position:fixed;inset:0;z-index:60;background:rgba(15,30,61,.45);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s}
+.mnav-open .mnav-scrim{opacity:1;visibility:visible;transition:opacity .25s ease}
+
+/* the panel slides in from the start side (left, or right in Arabic) */
+.mnav{position:fixed;top:0;bottom:0;inset-inline-start:0;z-index:61;width:min(86vw,360px);background:var(--paper);box-shadow:0 0 60px -10px rgba(15,30,61,.45);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 14px) 18px calc(env(safe-area-inset-bottom,0px) + 24px);transform:translateX(-102%);visibility:hidden;transition:transform .3s cubic-bezier(.3,.9,.3,1),visibility 0s linear .3s}
+[dir="rtl"] .mnav{transform:translateX(102%)}
+.mnav-open .mnav{transform:none;visibility:visible;transition:transform .3s cubic-bezier(.3,.9,.3,1)}
+html.mnav-open,html.mnav-open body{overflow:hidden}
+
+.mnav-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.mnav-head .brand span{font-size:26px}
+.mnav-head .brand .tagl{display:none}
+.mnav-close{display:inline-grid;place-items:center;width:44px;height:44px;padding:0;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--navy);cursor:pointer}
+.mnav-close:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+.mnav-close svg{width:18px;height:18px}
+
+.mnav-label{display:block;margin:18px 4px 8px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tan-deep)}
+[dir="rtl"] .mnav-label{font-family:inherit;font-size:12.5px;letter-spacing:0}
+
+/* modules: icon + name + one-line description */
+.mnav-mods{display:grid;gap:2px}
+.mnav-mods a{display:flex;align-items:center;gap:12px;min-height:56px;padding:8px 10px;border-radius:14px;text-decoration:none;color:var(--navy)}
+.mnav-mods a:hover,.mnav-mods a:focus-visible,.mnav-mods a[aria-current="page"]{background:var(--sand)}
+.mnav-mods .mi{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--navy)}
+.mnav-mods .mi svg{width:19px;height:19px}
+.mnav-mods a:nth-child(4) .mi{background:var(--tan)}
+.mnav-mods a.custom .mi{background:transparent;border:1.5px dashed var(--navy)}
+.mnav-mods b{display:block;font-family:var(--font-display);font-size:16px;line-height:1.2}
+.mnav-mods small{display:block;font-size:12.5px;font-weight:500;color:var(--muted);line-height:1.35;margin-top:1px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.mnav-mods a.custom{border-top:1px dashed var(--line);border-radius:0 0 14px 14px;margin-top:4px;padding-top:12px}
+
+/* main page links */
+.mnav-links{display:grid;margin-top:14px;border-top:1px solid var(--line);padding-top:8px}
+.mnav-links a{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 10px;border-radius:12px;text-decoration:none;font-weight:600;font-size:17px;color:var(--navy)}
+.mnav-links a:hover,.mnav-links a:focus-visible{background:var(--sand)}
+.mnav-links a[aria-current="page"]{color:var(--tan-deep)}
+.mnav-links a::after{content:"";width:8px;height:8px;border-top:2px solid currentColor;border-inline-end:2px solid currentColor;transform:rotate(45deg);opacity:.35;margin-inline-end:4px}
+[dir="rtl"] .mnav-links a::after{transform:rotate(-45deg)}
+
+/* language pills */
+.mnav-lang{display:flex;gap:8px}
+.mnav-lang a{flex:1;display:grid;place-items:center;min-height:44px;border-radius:12px;border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:14px;color:var(--navy)}
+.mnav-lang a small{display:none}
+.mnav-lang a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:var(--beige)}
+
+.mnav-cta{display:flex;width:100%;margin-top:22px}
+.mnav-cta .cta-l{display:inline}
+.mnav-cta .cta-s{display:none}
+
+/* tappable WhatsApp number and email in the contact card */
+.row b a{color:inherit;text-decoration:none}
+.row b a:hover{text-decoration:underline;text-underline-offset:3px}
+
+@media (max-width:860px){
+  /* larger tap target for the small "eyb / ..." breadcrumb links on inner pages */
+  .crumb a{display:inline-block;padding:10px 6px;margin:-10px -6px}
+  .row b a{display:inline-block;padding:9px 0;margin:-9px 0}
+  /* footer links: same spacing, but each one is easier to hit with a thumb */
+  .foot ul{gap:0}
+  .foot ul a{display:inline-block;padding:7px 0}
+  .foot ul li:not(:has(a)){padding:7px 0}
+}

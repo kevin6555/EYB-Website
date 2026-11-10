@@ -544,6 +544,7 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
 @media (max-width:640px){html[dir=rtl] .ba-row>div+div{border-right:0}}
 @media (max-width:520px){html[dir=rtl] .steps li{border-right:0}}
 </style>
+<link rel="stylesheet" href="../mobile-nav.css">
 </head>
 <body>
 <header>
@@ -582,7 +583,7 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
     </div>
     <div><h4>الوحدات</h4><ul><li><a href="sales.html">المبيعات</a></li><li><a href="stock.html">المخزون</a></li><li><a href="hr.html">الموارد البشرية</a></li><li><a href="ai.html">الذكاء الاصطناعي</a></li></ul></div>
     <div><h4>الشركة</h4><ul><li><a href="index.html#services">الخدمات</a></li><li><a href="about.html">من نحن</a></li><li><a href="index.html#work">دراسة حالة</a></li><li><a href="index.html#how">طريقة العمل</a></li><li><a href="index.html#packages">الباقات</a></li><li><a href="faq.html">الأسئلة الشائعة</a></li><li><a href="start.html">استبيان المشروع</a></li></ul></div>
-    <div><h4>تواصل معنا</h4><ul><li>+961 81 219 712</li><li>support@eybsystems.com</li><li>لبنان</li></ul></div>
+    <div><h4>تواصل معنا</h4><ul><li><a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">+961 81 219 712</a></li><li><a href="mailto:support@eybsystems.com">support@eybsystems.com</a></li><li>لبنان</li></ul></div>
   </div>
   <div class="wrap legal"><span>© 2026 EYB. جميع الحقوق محفوظة.</span><span class="legal-links"><a href="../privacy.html">سياسة الخصوصية</a><a href="../terms.html">الشروط</a><span>eybsystems.com</span></span></div>
 </footer>
@@ -608,5 +609,6 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') document.querySelectorAll('details.lang-dd[open]').forEach(function(d){ d.removeAttribute('open'); });
 });
 </script>
+<script src="../mobile-nav.js"></script>
 </body>
 </html>

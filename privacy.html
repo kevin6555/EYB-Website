@@ -513,6 +513,8 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 .lang-menu small{font-family:var(--font-mono);font-size:11px;opacity:.7}
 @media (max-width:640px){.lang-dd summary .globe{display:none}.lang-dd summary{padding:0 10px}}
 @media (max-width:480px){.cta-l{display:none}.cta-s{display:inline}.nav-cta{padding:0 14px}.nav-left{gap:12px}.nav-right{gap:8px}}
+.cc-change{font:inherit;font-weight:700;font-size:15px;color:var(--navy);background:var(--paper);border:1.5px solid var(--navy);border-radius:10px;min-height:40px;padding:0 14px;cursor:pointer}
+.cc-change:hover{background:var(--sand)}
 </style>
 <link rel="stylesheet" href="mobile-nav.css?v=4">
 </head>
@@ -544,13 +546,13 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
   <section class="section" style="padding-top:48px">
     <div class="wrap"><div class="doc">
 <p class="note">Template for review. This policy was written as a starting point and is not legal advice. Have it checked by a lawyer before relying on it, especially if you serve clients in the EU.</p>
-<p><b>Last updated:</b> November 8, 2026</p>
+<p><b>Last updated:</b> November 15, 2026</p>
 <p>This Privacy Policy explains how EYB ("we", "us") collects and uses personal information when you visit eybsystems.com, contact us, fill in our questionnaire, or use the systems we build for your company.</p>
 <h2>1. Information we collect</h2>
 <ul>
 <li><b>Information you give us:</b> your name, company, email, phone or WhatsApp number, country, role, and the answers you provide in our questionnaire or messages.</li>
 <li><b>Communication records:</b> messages and emails you send us, including through WhatsApp.</li>
-<li><b>Website usage:</b> basic, anonymous information such as pages visited, if we use analytics tools.</li>
+<li><b>Website usage:</b> pages visited, how you reached the site (for example from Google or WhatsApp), your country and device type and, only if you accept analytics cookies, which buttons you click, such as &ldquo;Chat on WhatsApp&rdquo;. See <a href="#cookies">Cookies and analytics</a>.</li>
 </ul>
 <h2>2. How we use it</h2>
 <ul>
@@ -562,19 +564,26 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 <p>We do not sell your personal information, and we do not use it for unrelated marketing without your consent.</p>
 <h2>3. Client data inside your system</h2>
 <p>The data you store in a system we build for you (customers, stock, employees and so on) belongs to your company. We access it only to build, support or improve your system, under the confidentiality agreement (NDA) we sign with you. Your data is not used to train public AI models.</p>
-<h2>4. Sharing</h2>
-<p>We share information only with service providers we need to run our business, such as website hosting, form handling and email providers, and only as needed to provide our services. We may also disclose information if required by law.</p>
-<h2>5. Retention</h2>
+<h2 id="cookies">4. Cookies and analytics</h2>
+<p>We use two tools to understand how visitors use this website:</p>
+<ul>
+<li><b>Cloudflare Web Analytics</b> counts visits and pages without cookies and without identifying you.</li>
+<li><b>Google Analytics</b> uses cookies to measure visits and clicks, such as on the WhatsApp and email buttons. It runs only if you click &ldquo;Accept&rdquo; on the cookie notice. If you click &ldquo;Decline&rdquo;, no Google Analytics cookies are set.</li>
+</ul>
+<p>Your choice is saved in your browser. <button type="button" class="cc-change" onclick="window.eybAnalyticsChoice &amp;&amp; window.eybAnalyticsChoice()">Change your cookie choice</button></p>
+<h2>5. Sharing</h2>
+<p>We share information only with service providers we need to run our business, such as website hosting, analytics (Cloudflare and Google), form handling and email providers, and only as needed to provide our services. We may also disclose information if required by law.</p>
+<h2>6. Retention</h2>
 <p>We keep your contact and project information for as long as needed to work with you and to meet legal and accounting obligations. You can ask us to delete it at any time.</p>
-<h2>6. Security</h2>
+<h2>7. Security</h2>
 <p>We use reasonable technical and organizational measures to protect your information, including access controls and confidentiality agreements. No system is fully secure, but we work to keep your data safe.</p>
-<h2>7. Your rights</h2>
+<h2>8. Your rights</h2>
 <p>You can ask us to access, correct or delete your personal information, or to stop contacting you. Email <a href="mailto:support@eybsystems.com">support@eybsystems.com</a> and we will respond within a reasonable time.</p>
-<h2>8. International clients</h2>
+<h2>9. International clients</h2>
 <p>EYB is based in Lebanon and works with clients in other countries. Your information may be processed in Lebanon or in the countries where our service providers operate.</p>
-<h2>9. Changes</h2>
+<h2>10. Changes</h2>
 <p>We may update this policy from time to time. The latest version will always be on this page with its date.</p>
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 <p>EYB, Lebanon · <a href="mailto:support@eybsystems.com">support@eybsystems.com</a> · +961 81 219 712</p>
 </div></div>
   </section>
@@ -614,6 +623,6 @@ document.addEventListener('keydown', function(e){
 });
 </script>
 <script src="mobile-nav.js?v=4"></script>
-<script src="analytics.js?v=1" defer></script>
+<script src="analytics.js?v=2" defer></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EYB Systems | ارتقِ بأعمالك</title>
-<meta name="description" content="تبني EYB أنظمة ERP وأتمتة بالذكاء الاصطناعي ومواقع إلكترونية للشركات النامية.">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="description" content="تبني EYB أنظمة ERP وأنظمة محاسبة وأتمتة بالذكاء الاصطناعي ومواقع إلكترونية وتطبيقات هاتف للشركات النامية.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
 <meta property="og:title" content="EYB Systems | ارتقِ بأعمالك">
-<meta property="og:description" content="تبني EYB أنظمة ERP وأتمتة بالذكاء الاصطناعي ومواقع إلكترونية للشركات النامية.">
+<meta property="og:description" content="تبني EYB أنظمة ERP وأنظمة محاسبة وأتمتة بالذكاء الاصطناعي ومواقع إلكترونية وتطبيقات هاتف للشركات النامية.">
 <meta property="og:image" content="https://eybsystems.com/social.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,7 +139,6 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 /* pain */
 .pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .pain-card{border:1px solid var(--line);border-radius:20px;padding:26px;background:var(--paper);display:flex;flex-direction:column;gap:10px}
-.pain-card .was{font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tan-deep)}
 .pain-card strong{font-family:var(--font-display);font-size:20px;line-height:1.25}
 .pain-card span{color:var(--muted);font-size:15px}
 .pain-card .now{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;font-weight:600;display:flex;gap:8px;align-items:flex-start}
@@ -190,7 +189,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 @media (max-width:520px){.feats{grid-template-columns:minmax(0,1fr)}.tab{padding:12px}.tab small{display:none}}
 
 /* services */
-.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .service{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .service .ico{width:44px;height:44px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
 .service .ico svg{width:22px;height:22px}
@@ -629,6 +628,161 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 .lang-menu small{font-family:var(--font-mono);font-size:11px;opacity:.7}
 @media (max-width:640px){.lang-dd summary .globe{display:none}.lang-dd summary{padding:0 10px}}
 @media (max-width:480px){.cta-l{display:none}.cta-s{display:inline}.nav-cta{padding:0 14px}.nav-left{gap:12px}.nav-right{gap:8px}}
+
+/* ===== integrations hub ===== */
+.hub-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center;margin-top:64px;padding-top:56px;border-top:1px solid var(--line)}
+.hub-copy{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hub-copy h3{font-size:clamp(26px,3.2vw,36px)}
+.hub-copy p{color:var(--muted);font-size:17px;max-width:46ch}
+.hub-copy .btn{margin-top:8px}
+.hub{position:relative;justify-self:end;width:100%;max-width:520px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;padding:22px;background:var(--navy);border-radius:28px;background-image:radial-gradient(rgba(245,248,252,.08) 1px,transparent 1px);background-size:18px 18px;box-shadow:0 40px 80px -40px rgba(15,30,61,.7)}
+.hub-lines{position:absolute;top:22px;left:22px;width:calc(100% - 44px);height:calc(100% - 44px);pointer-events:none;overflow:visible}
+.hub-lines line{stroke:#22D3EE;stroke-opacity:.6;stroke-width:1.6;stroke-dasharray:3 5;animation:hubFlow 1.2s linear infinite}
+@keyframes hubFlow{to{stroke-dashoffset:-16}}
+.hub-node{position:relative;z-index:1;aspect-ratio:1/1;min-width:0;background:var(--beige);color:var(--navy);border-radius:18px;padding:12px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;transition:transform .2s ease}
+.hub-node:hover{transform:translateY(-3px)}
+.hn-ic{width:38px;height:38px;border-radius:11px;background:var(--sand);display:grid;place-items:center;flex:none}
+.hn-ic svg{width:20px;height:20px}
+.hub-node b{font-family:var(--font-display);font-size:15px;line-height:1.2}
+.hub-node small{font-size:12px;line-height:1.35;color:var(--muted)}
+.hub-node.more{background:transparent;border:1.5px dashed rgba(245,248,252,.35);color:var(--beige)}
+.hub-node.more .hn-ic{background:transparent;border:1.5px dashed rgba(245,248,252,.45);color:var(--tan)}
+.hub-node.more small{color:var(--on-navy-dim)}
+.hub-core{position:relative;z-index:1;aspect-ratio:1/1;border-radius:22px;background:var(--navy-2);border:1.5px solid var(--tan);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--beige);font-family:var(--font-display);font-weight:700;font-size:20px;animation:corePulse 2.4s infinite}
+.hub-core svg{width:54px;height:54px}
+@keyframes corePulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.45)}70%{box-shadow:0 0 0 18px rgba(34,211,238,0)}100%{box-shadow:0 0 0 0 rgba(34,211,238,0)}}
+@media (min-width:901px) and (max-width:1100px){.hub-node small{display:none}}
+@media (max-width:900px){.hub-wrap{grid-template-columns:minmax(0,1fr)}.hub{justify-self:start}}
+@media (max-width:560px){.hub{gap:18px;padding:14px;border-radius:22px}.hub-lines{top:14px;left:14px;width:calc(100% - 28px);height:calc(100% - 28px)}.hub-node{padding:8px 6px;border-radius:14px;gap:4px}.hub-node small{display:none}.hub-node b{font-size:12.5px}.hn-ic{width:30px;height:30px;border-radius:9px}.hn-ic svg{width:17px;height:17px}.hub-core{font-size:15px;border-radius:16px}.hub-core svg{width:36px;height:36px}}
+
+/* ===== industries ===== */
+.ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ind{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .2s ease,border-color .2s ease}
+.ind:hover{transform:translateY(-4px);border-color:var(--navy)}
+.ind-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.ind-ic{width:46px;height:46px;border-radius:12px;background:var(--navy);display:grid;place-items:center;flex:none}
+.ind-ic svg{width:22px;height:22px}
+.ind p{color:var(--muted);font-size:15px}
+.ind ul{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px dashed var(--line);display:grid;gap:7px;font-family:var(--font-mono);font-size:12.5px}
+.ind li::before{content:"+ ";color:var(--tan-deep)}
+.ind.featured{background:var(--navy);color:var(--beige);border-color:var(--navy);background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:18px 18px}
+.ind.featured:hover{border-color:var(--tan)}
+.ind.featured p{color:var(--on-navy)}
+.ind.featured ul{border-top-color:rgba(245,248,252,.18)}
+.ind.featured li::before{color:var(--tan)}
+.ind.featured .ind-ic{background:var(--tan)}
+.ind-proof{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--tan);background:rgba(34,211,238,.14);border:1px solid rgba(34,211,238,.45);border-radius:999px;padding:5px 10px;text-decoration:none;white-space:nowrap}
+.ind-proof:hover{background:rgba(34,211,238,.26)}
+.ind-proof .dot{width:6px;height:6px}
+.ind-more{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:22px 26px;border:1.5px dashed var(--tan-deep);border-radius:20px}
+.ind-more p{color:var(--muted);max-width:70ch}
+.ind-more b{color:var(--navy);font-family:var(--font-display);font-size:17px}
+@media (max-width:1000px){.ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ind-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== compare ===== */
+.vs{display:grid;grid-template-columns:minmax(0,.75fr) repeat(3,minmax(0,1fr));grid-template-rows:repeat(7,auto);column-gap:14px;padding-top:16px}
+.vs-col{grid-row:1/span 7;display:grid;grid-template-rows:subgrid;position:relative;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:22px}
+.vs-head{padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line)}
+.vs-head h3{display:flex;align-items:center;gap:10px;font-size:20px}
+.vs-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}
+.vs-ic svg{width:18px;height:18px}
+.vs-ic.xl{background:#1D7A46}
+.vs-ic.shelf{background:#64748B}
+.vs-ic.logo svg{width:34px;height:34px}
+.vs-tag{font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.vs-cell{padding:15px 22px;display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--muted);border-top:1px dashed var(--line)}
+.vs-head+.vs-cell{border-top:0}
+.vs-i{flex:none;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;margin-top:1px}
+.vs-i svg{width:12px;height:12px}
+.vs-no .vs-i{background:#FDE8E8;color:#B42318}
+.vs-meh .vs-i{background:#FEF0C7;color:#B54708}
+.vs-yes .vs-i{background:var(--tan);color:var(--navy)}
+.vs-l{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.vs-labels{background:transparent;border-color:transparent}
+.vs-labels .vs-head{border-bottom-color:var(--line)}
+.vs-labels .vs-cell{align-items:center;padding-inline:4px;font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.vs-col.eyb{background:var(--navy);color:var(--beige);border-color:var(--navy);transform:translateY(-14px);box-shadow:0 34px 60px -30px rgba(15,30,61,.75);background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:18px 18px}
+.vs-col.eyb .vs-head{border-bottom-color:rgba(245,248,252,.14)}
+.vs-col.eyb .vs-tag{color:var(--tan)}
+.vs-col.eyb .vs-cell{color:var(--beige);font-weight:600;border-top-color:rgba(245,248,252,.12)}
+.vs-sticker{position:absolute;top:-15px;right:16px;z-index:2;background:var(--tan);color:var(--navy);font-family:var(--font-mono);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:10px;transform:rotate(6deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.45)}
+.vs-switch{display:none;gap:6px;padding:5px;margin-bottom:30px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.vs-switch button{all:unset;box-sizing:border-box;flex:1;min-height:44px;padding:0 8px;border-radius:10px;display:grid;place-items:center;text-align:center;cursor:pointer;font-weight:700;font-size:14px;color:var(--navy)}
+.vs-switch button[aria-pressed="true"]{background:var(--navy);color:var(--beige)}
+.vs-switch button:focus-visible{outline:3px solid var(--tan);outline-offset:2px}
+.vs-punch{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:28px 32px;background:var(--paper);border:1px solid var(--line);border-radius:22px}
+.vs-quote{font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.4vw,26px);line-height:1.3;max-width:34ch}
+.vs-quote em{font-style:normal;color:var(--tan-deep)}
+.vs.anim .vs-cell{opacity:0}
+.vs-cell:nth-child(2){--i:0}.vs-cell:nth-child(3){--i:1}.vs-cell:nth-child(4){--i:2}.vs-cell:nth-child(5){--i:3}.vs-cell:nth-child(6){--i:4}.vs-cell:nth-child(7){--i:5}
+.vs-col.shelf{--c:1}.vs-col.eyb{--c:2}
+.vs.anim.seen .vs-cell{animation:rise .45s ease-out both;animation-delay:calc(var(--i,0) * 70ms + var(--c,0) * 160ms)}
+.vs.anim.seen .vs-yes .vs-i{animation:popIn .45s cubic-bezier(.3,1.4,.5,1) both;animation-delay:calc(var(--i,0) * 70ms + var(--c,0) * 160ms + 200ms)}
+@media (max-width:860px){
+  .vs-switch{display:flex}
+  .vs{display:block;padding-top:0}
+  .vs-labels{display:none}
+  .vs-col{display:none;transform:none}
+  .vs-col.eyb{transform:none}
+  .vs[data-show="excel"] .vs-col.excel,.vs[data-show="shelf"] .vs-col.shelf,.vs[data-show="eyb"] .vs-col.eyb{display:block}
+  .vs-col .vs-cell{--c:0}
+  .vs-l{position:static;width:auto;height:auto;overflow:visible;clip:auto;clip-path:none;white-space:normal;display:block;margin-bottom:2px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .vs-col.eyb .vs-l{color:var(--on-navy-dim)}
+  .vs-cell{padding:14px 20px}
+  .vs-head{padding:20px}
+  .vs-punch{padding:24px 22px}
+}
+
+/* ===== case study numbers ===== */
+.work-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.live-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--tan);background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.4);border-radius:999px;padding:5px 12px}
+.live-chip .dot{width:6px;height:6px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.stat{border:1px solid rgba(245,248,252,.16);background:rgba(15,30,61,.6);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.stat b{font-family:var(--font-display);font-size:clamp(28px,3vw,36px);line-height:1;color:var(--tan);white-space:nowrap}
+.stat span{font-size:13.5px;line-height:1.4;color:var(--on-navy)}
+@media (max-width:520px){.stats{grid-template-columns:minmax(0,1fr)}.stat{flex-direction:row;align-items:center;gap:14px}.stat b{min-width:112px}}
+
+/* ===== product tour ===== */
+.tour{background:#0F1E3D;color:#F5F8FC;position:relative;overflow:hidden}
+.tour::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.tour .wrap{position:relative}
+.tour-tabs{display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;scrollbar-width:none;padding:3px}
+.tour-tabs::-webkit-scrollbar{display:none}
+.tour-tab{all:unset;box-sizing:border-box;flex:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid rgba(245,248,252,.2);color:#F5F8FC;font-weight:600;font-size:15px;white-space:nowrap;transition:background .15s ease,border-color .15s ease}
+.tour-tab:hover{background:rgba(245,248,252,.07)}
+.tour-tab:focus-visible{outline:3px solid #22D3EE;outline-offset:2px}
+.tour-tab[aria-selected="true"]{background:#22D3EE;border-color:#22D3EE;color:#0F1E3D}
+.tour-frame{background:#1B2C52;border:1px solid rgba(245,248,252,.14);border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.tour-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(245,248,252,.1);font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+.tour-bar .lights{display:flex;gap:6px}.tour-bar .lights i{width:9px;height:9px;border-radius:50%;background:#24375F}
+.tour-view{position:relative;aspect-ratio:16/10;background:#F5F8FC}
+.tour-pane{position:absolute;inset:0}
+.tour-pane a{display:block;height:100%}
+.tour-pane video,.tour-pane img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.tour-pane video{cursor:pointer}
+.tour-ctrl{display:flex;align-items:center;gap:8px;padding:10px 12px;border-top:1px solid rgba(245,248,252,.1)}
+.tour-ctrl[hidden]{display:none}
+.tc-btn{all:unset;box-sizing:border-box;cursor:pointer;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:44px;height:40px;padding:0 10px;border-radius:10px;color:#F5F8FC;font-family:var(--font-mono);font-size:11.5px;font-weight:600;border:1px solid rgba(245,248,252,.18)}
+.tc-btn:hover{background:rgba(245,248,252,.08)}
+.tc-btn:focus-visible{outline:3px solid #22D3EE;outline-offset:2px}
+.tc-btn svg{width:14px;height:14px}
+.tc-main{background:#22D3EE;border-color:#22D3EE;color:#0F1E3D}
+.tc-main:hover{background:#67E8F9}
+.tc-main .i-play{display:none}
+.tc-main.is-paused .i-play{display:block}
+.tc-main.is-paused .i-pause{display:none}
+.tc-seek{flex:1;min-width:0;height:24px;margin:0 4px;background:transparent;cursor:pointer;-webkit-appearance:none;appearance:none;--p:0%}
+.tc-seek::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,#22D3EE var(--p),rgba(245,248,252,.2) var(--p))}
+.tc-seek::-moz-range-track{height:6px;border-radius:3px;background:linear-gradient(90deg,#22D3EE var(--p),rgba(245,248,252,.2) var(--p))}
+.tc-seek::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;margin-top:-5px;border-radius:50%;background:#F5F8FC;border:3px solid #22D3EE}
+.tc-seek::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#F5F8FC;border:3px solid #22D3EE}
+.tc-seek:focus-visible{outline:3px solid #22D3EE;outline-offset:2px;border-radius:6px}
+.tc-time{flex:none;font-family:var(--font-mono);font-size:12px;color:#CBD5E1;min-width:84px;text-align:right}
+.tour-cap{margin-top:16px;font-size:16px;color:#CBD5E1;max-width:70ch}
+.tour-note{margin-top:6px;font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+@media (max-width:560px){.tour-frame{border-radius:16px}.tour-tab{padding:0 14px;font-size:14px}.tc-btn{min-width:40px;padding:0 8px}.tc-btn span{display:none}.tc-time{min-width:0;font-size:11px}}
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <style>
@@ -660,6 +814,10 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
 @media (max-width:860px){html[dir=rtl] .menu{right:16px;left:16px}}
 @media (max-width:640px){html[dir=rtl] .ba-row>div+div{border-right:0}}
 @media (max-width:520px){html[dir=rtl] .steps li{border-right:0}}
+
+html[dir=rtl] .vs-sticker{right:auto;left:16px;transform:rotate(-6deg)}
+html[dir=rtl] .ind li::before{content:"+ "}
+html[dir=rtl] .stat b{font-size:clamp(24px,2.5vw,30px)}
 </style>
 <link rel="stylesheet" href="../mobile-nav.css?v=4">
 </head>
@@ -675,7 +833,6 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
         </div>
         <a href="#services">الخدمات</a>
         <a href="#work">أعمالنا</a>
-        <a href="#packages">الباقات</a>
         <a href="about.html">من نحن</a>
       </nav>
     </div>
@@ -744,9 +901,9 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
         <h2 id="pain-h">هل يبدو هذا مألوفًا؟</h2>
       </div>
       <div class="pain-grid">
-        <div class="pain-card"><span class="was">اليوم</span><strong>ملفات Excel كثيرة جدًا</strong><span>كل قسم لديه ملفاته الخاصة، ولا يتطابق أيٌّ منها. إيجاد النسخة الصحيحة يأخذ وقتًا أطول من العمل نفسه.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: مصدر واحد موثوق للجميع</span></div>
-        <div class="pain-card"><span class="was">اليوم</span><strong>منصّات كثيرة جدًا</strong><span>المحاسبة في برنامج، والطلبات على واتساب، والتقارير في مكان آخر. لا شيء مرتبط بالآخر.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: كل شيء في نظام واحد مترابط</span></div>
-        <div class="pain-card"><span class="was">اليوم</span><strong>أخطاء بشرية كثيرة جدًا</strong><span>إدخال البيانات نفسها مرارًا يؤدي إلى فواتير خاطئة، وتقارير غير متطابقة، وخسارة المال.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: أدخلها مرة واحدة، والنظام يتولى الباقي</span></div>
+        <div class="pain-card"><strong>ملفات Excel كثيرة جدًا</strong><span>كل قسم لديه ملفاته الخاصة، ولا يتطابق أيٌّ منها. إيجاد النسخة الصحيحة يأخذ وقتًا أطول من العمل نفسه.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: مصدر واحد موثوق للجميع</span></div>
+        <div class="pain-card"><strong>منصّات كثيرة جدًا</strong><span>المحاسبة في برنامج، والطلبات على واتساب، والتقارير في مكان آخر. لا شيء مرتبط بالآخر.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: كل شيء في نظام واحد مترابط</span></div>
+        <div class="pain-card"><strong>أخطاء بشرية كثيرة جدًا</strong><span>إدخال البيانات نفسها مرارًا يؤدي إلى فواتير خاطئة، وتقارير غير متطابقة، وخسارة المال.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>مع EYB: أدخلها مرة واحدة، والنظام يتولى الباقي</span></div>
       </div>
     
       <div class="ba-wrap">
@@ -769,12 +926,32 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
     </div>
   </section>
 
+  <section class="section tour on-navy band-navy" id="tour" aria-labelledby="tour-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">جولة في النظام</span>
+        <h2 id="tour-h">شاهده وهو يعمل</h2>
+        <p class="lead">نظام EYB حقيقي ببيانات تجريبية: الأعمال والتخطيط والمخزون والموارد البشرية والإحصاءات وكتالوج لزبائنك.</p>
+      </div>
+      <div class="tour-tabs" role="tablist" aria-label="أقسام النظام"><button class="tour-tab" type="button" role="tab" id="tour-t-tour" aria-controls="tour-p-tour" aria-selected="true" tabindex="0" data-k="tour" data-cap="جولة سريعة في النظام. يمكنك الإيقاف أو الرجوع أو التقديم في أي وقت."><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z"/></svg>جولة</button><button class="tour-tab" type="button" role="tab" id="tour-t-jobs" aria-controls="tour-p-jobs" aria-selected="false" tabindex="-1" data-k="jobs" data-cap="كل الأعمال الجارية في شاشة واحدة: الزبون والمهندسون وتاريخ التسليم والمرحلة.">الأعمال</button><button class="tour-tab" type="button" role="tab" id="tour-t-job" aria-controls="tour-p-job" aria-selected="false" tabindex="-1" data-k="job" data-cap="اضغط على أي عمل لترى مراحله الميكانيكية والكهربائية بالتواريخ، مرحلة بعد مرحلة.">مراحل العمل</button><button class="tour-tab" type="button" role="tab" id="tour-t-planning" aria-controls="tour-p-planning" aria-selected="false" tabindex="-1" data-k="planning" data-cap="مهام كل عمل، ومن يعمل عليها، ومدى تقدّمها.">التخطيط</button><button class="tour-tab" type="button" role="tab" id="tour-t-stock" aria-controls="tour-p-stock" aria-selected="false" tabindex="-1" data-k="stock" data-cap="كتالوج المخزون مع كل المقاسات والكمية المتوفرة ومكان التخزين.">المخزون</button><button class="tour-tab" type="button" role="tab" id="tour-t-stats" aria-controls="tour-p-stats" aria-selected="false" tabindex="-1" data-k="stats" data-cap="للإدارة: يكتشف النظام ما يُبطئ العمل ويقترح ما يجب فعله.">المشاكل والتحسينات</button><button class="tour-tab" type="button" role="tab" id="tour-t-catalogue" aria-controls="tour-p-catalogue" aria-selected="false" tabindex="-1" data-k="catalogue" data-cap="لزبائنك: جهاز لوحي في صالة العرض يتصفّح فيه الزبائن منتجاتك ومقاساتها وأسعارها.">كتالوج الزبائن</button><button class="tour-tab" type="button" role="tab" id="tour-t-hr" aria-controls="tour-p-hr" aria-selected="false" tabindex="-1" data-k="hr" data-cap="ملفات الموظفين مع الوظيفة والراتب ورصيد الإجازات.">الموارد البشرية</button></div>
+      <div class="tour-frame">
+        <div class="tour-bar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>eyb / demo</span><span class="live"><i class="dot"></i>live</span></div>
+        <div class="tour-view">
+          <div class="tour-pane" role="tabpanel" id="tour-p-tour" aria-labelledby="tour-t-tour"><video id="tourVideo" muted loop playsinline controls preload="metadata" poster="../media/erp-tour-poster.webp" aria-label="فيديو جولة في نظام EYB"><source src="../media/eyb-erp-tour.mp4" type="video/mp4"></video></div><div class="tour-pane" role="tabpanel" id="tour-p-jobs" aria-labelledby="tour-t-jobs" hidden><a href="../media/erp-jobs.webp" target="_blank" rel="noopener"><img src="../media/erp-jobs.webp" alt="كل الأعمال الجارية في شاشة واحدة: الزبون والمهندسون وتاريخ التسليم والمرحلة." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-job" aria-labelledby="tour-t-job" hidden><a href="../media/erp-job-timeline.webp" target="_blank" rel="noopener"><img src="../media/erp-job-timeline.webp" alt="اضغط على أي عمل لترى مراحله الميكانيكية والكهربائية بالتواريخ، مرحلة بعد مرحلة." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-planning" aria-labelledby="tour-t-planning" hidden><a href="../media/erp-planning.webp" target="_blank" rel="noopener"><img src="../media/erp-planning.webp" alt="مهام كل عمل، ومن يعمل عليها، ومدى تقدّمها." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-stock" aria-labelledby="tour-t-stock" hidden><a href="../media/erp-stock.webp" target="_blank" rel="noopener"><img src="../media/erp-stock.webp" alt="كتالوج المخزون مع كل المقاسات والكمية المتوفرة ومكان التخزين." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-stats" aria-labelledby="tour-t-stats" hidden><a href="../media/erp-stats.webp" target="_blank" rel="noopener"><img src="../media/erp-stats.webp" alt="للإدارة: يكتشف النظام ما يُبطئ العمل ويقترح ما يجب فعله." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-catalogue" aria-labelledby="tour-t-catalogue" hidden><a href="../media/erp-catalogue.webp" target="_blank" rel="noopener"><img src="../media/erp-catalogue.webp" alt="لزبائنك: جهاز لوحي في صالة العرض يتصفّح فيه الزبائن منتجاتك ومقاساتها وأسعارها." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-hr" aria-labelledby="tour-t-hr" hidden><a href="../media/erp-hr.webp" target="_blank" rel="noopener"><img src="../media/erp-hr.webp" alt="ملفات الموظفين مع الوظيفة والراتب ورصيد الإجازات." width="1600" height="1000" loading="lazy" decoding="async"></a></div>
+        </div>
+        <div class="tour-ctrl" id="tourCtrl" dir="ltr" hidden data-play="تشغيل" data-pause="إيقاف مؤقت"><button type="button" class="tc-btn tc-main" id="tcPlay" aria-label="تشغيل"><svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z"/></svg><svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/></svg></button><button type="button" class="tc-btn" id="tcBack" aria-label="رجوع 5 ثوانٍ" title="رجوع 5 ثوانٍ"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 3.5L2.5 8 8 12.5zM14 3.5L8.5 8 14 12.5z"/></svg><span>5s</span></button><button type="button" class="tc-btn" id="tcFwd" aria-label="تقديم 5 ثوانٍ" title="تقديم 5 ثوانٍ"><span>5s</span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 3.5L13.5 8 8 12.5zM2 3.5L7.5 8 2 12.5z"/></svg></button><input type="range" class="tc-seek" id="tcSeek" min="0" max="44" step="0.1" value="0" aria-label="موضع الفيديو"><span class="tc-time" id="tcTime">0:00 / 0:44</span></div>
+      </div>
+      <p class="tour-cap" id="tourCap" aria-live="polite">جولة سريعة في النظام. يمكنك الإيقاف أو الرجوع أو التقديم في أي وقت.</p>
+      <p class="tour-note">بيانات تجريبية: كل الأسماء والشركات والأرقام وهمية.</p>
+    </div>
+  </section>
+
   <section class="section band" id="services" aria-labelledby="services-h">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">الخدمات</span>
         <h2 id="services-h">ماذا نقدّم لك</h2>
-        <p class="lead">من موقع إلكتروني واحد إلى نظام متكامل للشركة. كل ما نبنيه مترابط، لتنمو خطوة بخطوة.</p>
+        <p class="lead">من موقع إلكتروني أو تطبيق واحد إلى نظام متكامل للشركة. كل ما نبنيه مترابط، لتنمو خطوة بخطوة.</p>
       </div>
       <div class="services">
         <article class="service">
@@ -782,6 +959,12 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
           <h3>ERP حسب الطلب</h3>
           <p>نظام واحد لكل عملياتك، مصمَّم حول طريقة عملك الحقيقية.</p>
           <ul><li>المبيعات وإدارة العملاء</li><li>المخزون والمشتريات</li><li>الموارد البشرية والرواتب</li><li>الإنتاج ومسار العمل</li></ul>
+        </article>
+        <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8v3H8z"/><path d="M8.5 14h.01M12 14h.01M15.5 14h.01M8.5 17.5h.01M12 17.5h.01M15.5 17.5h.01"/></svg></div>
+          <h3>المحاسبة</h3>
+          <p>حسابات ومالية واضحة، مرتبطة بالمبيعات والمخزون.</p>
+          <ul><li>الفواتير والمدفوعات</li><li>المصاريف والضريبة على القيمة المضافة</li><li>التقارير المالية</li></ul>
         </article>
         <article class="service">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div>
@@ -796,6 +979,12 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
           <ul><li>مواقع الشركات</li><li>متوافق مع الهاتف</li><li>مرتبط بنظام ERP</li></ul>
         </article>
         <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+          <h3>تطبيقات الهاتف</h3>
+          <p>تطبيق خاص بشركتك لفريقك أو لزبائنك، على Android و iPhone.</p>
+          <ul><li>Android و iPhone</li><li>تطبيقات للفريق والزبائن</li><li>مرتبط بنظامك</li></ul>
+        </article>
+        <article class="service">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></div>
           <h3>الاستشارات</h3>
           <p>نرسم خريطة لطريقة عمل شركتك اليوم ونريك ما يجب إصلاحه أولًا.</p>
@@ -806,6 +995,18 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
           <a class="btn btn-ghost" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A5%D9%84%D9%89%20%D8%AD%D9%84%20%D8%AE%D8%A7%D8%B5%20%D9%84%D8%B9%D9%85%D9%84%D9%8A%3A" target="_blank" rel="noopener">أخبرنا بما تحتاجه</a>
         </article>
       </div>
+      <div class="hub-wrap">
+        <div class="hub-copy">
+          <span class="eyebrow">مترابط</span>
+          <h3>يعمل مع الأدوات التي تستخدمها اليوم</h3>
+          <p>يبقى فريقك على واتساب والبريد الإلكتروني و Excel. يرتبط EYB بها، فتصل المعلومات إلى نظام واحد بدل أن تضيع بين التطبيقات.</p>
+          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D9%87%D9%84%20%D9%8A%D9%85%D9%83%D9%86%20%D8%B1%D8%A8%D8%B7%20%D9%86%D8%B8%D8%A7%D9%85%D9%83%D9%85%20%D8%A8%D8%A7%D9%84%D8%A3%D8%AF%D9%88%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AA%D9%8A%20%D9%86%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%87%D8%A7%D8%9F" target="_blank" rel="noopener">اسألنا عن أدواتك</a>
+        </div>
+        <div class="hub" role="list" aria-label="الأدوات التي يرتبط بها EYB">
+          <svg class="hub-lines" viewBox="0 0 300 300" aria-hidden="true"><line x1="44" y1="44" x2="150" y2="150"/><line x1="150" y1="44" x2="150" y2="150"/><line x1="256" y1="44" x2="150" y2="150"/><line x1="44" y1="150" x2="150" y2="150"/><line x1="256" y1="150" x2="150" y2="150"/><line x1="44" y1="256" x2="150" y2="150"/><line x1="150" y1="256" x2="150" y2="150"/><line x1="256" y1="256" x2="150" y2="150"/></svg>
+          <div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 10h6M9 13.5h4"/></svg></span><b>واتساب</b><small>تنبيهات وتقارير ومساعد ذكي</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></span><b>البريد الإلكتروني</b><small>فواتير الموردين تُسجَّل من بريدك</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 14.5h18M9 4v16"/></svg></span><b>Excel</b><small>جداولك القديمة تُنقل من اليوم الأول</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></span><b>PDF والمستندات</b><small>تُقرأ وتُسجَّل عنك</small></div><div class="hub-core" aria-hidden="true"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#24375F"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg><span>eyb</span></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V4h3M18 4h3v3M21 17v3h-3M6 20H3v-3"/><path d="M7.5 8v8M10.5 8v8M13.5 8v8M16.5 8v8"/></svg></span><b>الباركود</b><small>بطاقات أصناف جاهزة للمسح</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><b>الموقع الإلكتروني</b><small>الاستفسارات تصل مباشرة إلى نظامك</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><b>تطبيق الهاتف</b><small>فريقك على Android و iPhone</small></div><div class="hub-node more" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><b>أدواتك</b><small>تستخدم شيئًا آخر؟ اسألنا.</small></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -814,18 +1015,18 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
       <div class="head">
         <span class="eyebrow">ابنِ نظامك</span>
         <h2 id="build-h">اختر ما يحتاجه عملك</h2>
-        <p class="lead">اضغط على الأجزاء التي تريدها. سنقترح عليك باقة، ويمكنك إرسال اختيارك إلينا على واتساب بضغطة واحدة.</p>
+        <p class="lead">اضغط على الأجزاء التي تريدها وأرسل اختيارك إلينا على واتساب بضغطة واحدة. سنراجعه معك في اجتماع مجاني.</p>
       </div>
       <div class="pick-grid">
-        <div class="pick-opts" role="group" aria-label="أجزاء نظامك"><button class="pick" type="button" aria-pressed="false" data-k="sales" data-name="المبيعات وإدارة العملاء"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="pk-tx"><b>المبيعات وإدارة العملاء</b><small>العملاء المحتملون والعملاء والمتابعات</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="stock" data-name="المخزون والمشتريات"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="pk-tx"><b>المخزون والمشتريات</b><small>مخزون مباشر وطلبات ذكية</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="hr" data-name="الموارد البشرية والرواتب"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="pk-tx"><b>الموارد البشرية والرواتب</b><small>الفريق والحضور والرواتب</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="production" data-name="الإنتاج"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><span class="pk-tx"><b>الإنتاج</b><small>التخطيط والتكاليف ومسار العمل</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="ai" data-name="أتمتة بالذكاء الاصطناعي"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span class="pk-tx"><b>أتمتة بالذكاء الاصطناعي</b><small>تقارير ومساعدون وتحليلات</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="website" data-name="موقع إلكتروني"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><span class="pk-tx"><b>موقع إلكتروني</b><small>موقع مرتبط بنظامك</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="reports" data-name="التقارير ولوحات المتابعة"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></span><span class="pk-tx"><b>التقارير ولوحات المتابعة</b><small>أرقام مباشرة للإدارة</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="custom" data-name="شيء حسب الطلب"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="pk-tx"><b>شيء حسب الطلب</b><small>أخبرنا بما تحتاجه</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
+        <div class="pick-opts" role="group" aria-label="أجزاء نظامك"><button class="pick" type="button" aria-pressed="false" data-k="sales" data-name="المبيعات وإدارة العملاء"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="pk-tx"><b>المبيعات وإدارة العملاء</b><small>العملاء المحتملون والعملاء والمتابعات</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="stock" data-name="المخزون والمشتريات"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="pk-tx"><b>المخزون والمشتريات</b><small>مخزون مباشر وطلبات ذكية</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="hr" data-name="الموارد البشرية والرواتب"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="pk-tx"><b>الموارد البشرية والرواتب</b><small>الفريق والحضور والرواتب</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="production" data-name="الإنتاج"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><span class="pk-tx"><b>الإنتاج</b><small>التخطيط والتكاليف ومسار العمل</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="accounting" data-name="المحاسبة"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8v3H8z"/><path d="M8.5 14h.01M12 14h.01M15.5 14h.01M8.5 17.5h.01M12 17.5h.01M15.5 17.5h.01"/></svg></span><span class="pk-tx"><b>المحاسبة</b><small>الفواتير والمصاريف والمالية</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="ai" data-name="أتمتة بالذكاء الاصطناعي"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span class="pk-tx"><b>أتمتة بالذكاء الاصطناعي</b><small>تقارير ومساعدون وتحليلات</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="website" data-name="موقع إلكتروني"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><span class="pk-tx"><b>موقع إلكتروني</b><small>موقع مرتبط بنظامك</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="app" data-name="تطبيق هاتف"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span class="pk-tx"><b>تطبيق هاتف</b><small>تطبيقك الخاص على Android و iPhone</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="reports" data-name="التقارير ولوحات المتابعة"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></span><span class="pk-tx"><b>التقارير ولوحات المتابعة</b><small>أرقام مباشرة للإدارة</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="custom" data-name="شيء حسب الطلب"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="pk-tx"><b>شيء حسب الطلب</b><small>أخبرنا بما تحتاجه</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
         <aside class="pick-result" aria-live="polite">
           <span class="eyebrow">نظامك</span>
           <div class="pr-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <p class="pr-empty" id="prEmpty">اختر جزءًا واحدًا على الأقل لترى الباقة المقترحة.</p>
+          <p class="pr-empty" id="prEmpty">اختر جزءًا واحدًا على الأقل لبناء نظامك.</p>
           <div class="pr-body" id="prBody" hidden>
-            <p class="pr-label">الباقة المقترحة</p>
-            <h3 id="prPkg">الأعمال</h3>
-            <p class="pr-why" id="prWhy"></p>
+            <p class="pr-label">اختيارك</p>
+            <h3 id="prPkg"></h3>
+            <p class="pr-why" id="prWhy">سنراجعه معك في اجتماع مجاني، ثم نرسل لك عرض سعر يناسبك.</p>
             <ul class="pr-list" id="prList"></ul>
           </div>
           <a class="btn btn-tan is-off" id="prSend" href="https://wa.me/96181219712" target="_blank" rel="noopener" aria-disabled="true">أرسل اختياري عبر واتساب</a>
@@ -838,10 +1039,11 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
     <div class="wrap">
       <div class="work on-navy">
         <div>
-          <span class="eyebrow">دراسة حالة</span>
+          <div class="work-top"><span class="eyebrow">دراسة حالة</span><span class="live-chip"><i class="dot"></i>يعمل منذ أيار 2026</span></div>
           <h2 id="work-h">صُمّم لشركة GMM، مصنّع معدات الستانلس ستيل في رومية</h2>
           <p style="margin-top:18px">بنينا نظام ERP كاملًا لشركة GMM، استبدل جداول البيانات والمتابعة اليدوية بنظام واحد يستخدمه الفريق كله.</p>
-          <ul class="results"><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>ملفات Excel أقل بكثير</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>أخطاء بشرية أقل في العمل اليومي</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>تواصل أفضل بين الأقسام</span></li></ul>
+          <div class="stats" role="list" aria-label="GMM بالأرقام"><div class="stat" role="listitem"><b>20</b><span>ملف Excel تقريبًا استُبدلت بنظام واحد</span></div><div class="stat" role="listitem"><b>15 دقيقة</b><span>لتحضير الرواتب، بدل ساعتين</span></div><div class="stat" role="listitem"><b>18</b><span>شخصًا يستخدمونه في 5 أقسام</span></div></div>
+          <ul class="results"><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>أخطاء بشرية أقل في العمل اليومي</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>تواصل أفضل بين الأقسام</span></li></ul>
         </div>
         <div class="facts">
           <div class="fact"><span>العميل</span><b>GMM ش.م.م، رومية، لبنان</b></div>
@@ -849,6 +1051,46 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
           <div class="fact"><span>ما تم تسليمه</span><b>نظام ERP حسب الطلب</b></div>
           <div class="fact"><span>الوحدات</span><b>الموارد البشرية، المخزون، المبيعات، التصنيع ومسارات العمل</b></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band alt" id="industries" aria-labelledby="ind-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">القطاعات</span>
+        <h2 id="ind-h">مصمَّم لشركات مثل شركتك</h2>
+        <p class="lead">لا تعمل شركتان بالطريقة نفسها، لذلك نبني كل نظام حول طريقة عملك. إليك كيف يبدو ذلك في بعض القطاعات.</p>
+      </div>
+      <div class="ind-grid">
+        <article class="ind featured">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><a class="ind-proof" href="#work"><i class="dot"></i>يعمل لدى GMM</a></div>
+          <h3>التصنيع</h3>
+          <p>من المواد الأولية إلى المنتج النهائي، مع الكلفة الحقيقية لكل صنف.</p>
+          <ul><li>تخطيط الإنتاج ومسارات العمل</li><li>المواد الأولية والمنتجات الجاهزة</li><li>كلفة كل منتج</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6h11v10h-11z"/><path d="M13.5 9.5h4l3 3V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span></div>
+          <h3>التجارة والتوزيع</h3>
+          <p>اعرف ما لديك، وما هو في الطريق، ومن يدين لك.</p>
+          <ul><li>المخزون في كل المستودعات</li><li>مقارنة أسعار الموردين</li><li>الطلبيات والتسليم والمدفوعات</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5 11v9h14v-9"/><path d="M10 20v-5h4v5"/></svg></span></div>
+          <h3>المتاجر والبيع بالتجزئة</h3>
+          <p>المبيعات والمخزون وفريقك، متزامنون كل يوم.</p>
+          <ul><li>مخزون مباشر في كل فرع</li><li>بطاقات أصناف جاهزة للباركود</li><li>تقارير يومية على واتساب</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span></div>
+          <h3>الخدمات والمقاولات</h3>
+          <p>المشاريع والفريق والفواتير في مكان واحد.</p>
+          <ul><li>المشاريع والمتابعات</li><li>الحضور والرواتب</li><li>الفواتير والمدفوعات</li></ul>
+        </article>
+      </div>
+      <div class="ind-more">
+        <p><b>قطاعك غير موجود؟</b> إذا كانت شركتك لا تزال تعمل على Excel والورق وواتساب، يمكننا بناء نظام لها.</p>
+        <a class="btn btn-ghost" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A3%D9%86%20%D8%A3%D8%AE%D8%A8%D8%B1%D9%83%D9%85%20%D8%B9%D9%86%20%D8%B4%D8%B1%D9%83%D8%AA%D9%8A%3A" target="_blank" rel="noopener">أخبرنا عن شركتك</a>
       </div>
     </div>
   </section>
@@ -870,6 +1112,24 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
     </div>
   </section>
 
+  <section class="section band alt" id="compare" aria-labelledby="vs-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">مقارنة</span>
+        <h2 id="vs-h">ثلاث طرق لإدارة شركتك. واحدة فقط مصمَّمة لك.</h2>
+        <p class="lead">جداول البيانات مجانية والبرامج الجاهزة متوفرة فورًا. إليك كيف تتقارن في ما يهمّ فعلًا.</p>
+      </div>
+      <div class="vs-switch" role="group" aria-label="اختر خيارًا للمقارنة"><button type="button" data-col="excel" aria-pressed="false">Excel</button><button type="button" data-col="shelf" aria-pressed="false">ERP جاهز</button><button type="button" data-col="eyb" aria-pressed="true">EYB</button></div>
+      <div class="vs" id="vsGrid" data-show="eyb">
+        <div class="vs-col vs-labels" aria-hidden="true"><div class="vs-head"></div><div class="vs-cell">يناسب طريقة عملك</div><div class="vs-cell">الكلفة</div><div class="vs-cell">تحتاج تعديلًا؟</div><div class="vs-cell">الدعم</div><div class="vs-cell">بياناتك</div><div class="vs-cell">الذكاء الاصطناعي</div></div><div class="vs-col excel"><div class="vs-head"><h3><span class="vs-ic xl"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 14.5h18M9 4v16"/></svg></span>Excel + واتساب</h3><span class="vs-tag">الطريقة «المجانية»</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">يناسب طريقة عملك</small>أنت تتأقلم مع الجدول</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الكلفة</small>مجاني، حتى يكلّفك خطأ واحد</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">تحتاج تعديلًا؟</small>عمود جديد، ونسخة جديدة</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الدعم</small>اسأل من صمّم الملف</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">بياناتك</small>موزّعة بين الحواسيب والمحادثات</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الذكاء الاصطناعي</small>نسخ، لصق، تكرار</span></div></div><div class="vs-col shelf"><div class="vs-head"><h3><span class="vs-ic shelf"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>ERP جاهز</h3><span class="vs-tag">مقاس واحد للجميع</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">يناسب طريقة عملك</small>أنت تتأقلم مع البرنامج</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الكلفة</small>تراخيص وإضافات وشريك لإعداده</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">تحتاج تعديلًا؟</small>تطلبه وتنتظر</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الدعم</small>تذاكر ومقالات مساعدة</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">بياناتك</small>غالبًا على خوادم الشركة المورّدة</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">الذكاء الاصطناعي</small>ميزات عامة مصمَّمة للجميع</span></div></div><div class="vs-col eyb"><span class="vs-sticker" aria-hidden="true">مصمَّم لك</span><div class="vs-head"><h3><span class="vs-ic logo"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#24375F"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg></span>EYB</h3><span class="vs-tag">نظام مبني لك</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">يناسب طريقة عملك</small>النظام يتأقلم معك</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">الكلفة</small>رسم إعداد واحد واشتراك شهري واحد</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">تحتاج تعديلًا؟</small>اطلبه، ونحن نبنيه.</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">الدعم</small>راسلنا على واتساب، أو نأتي إليك</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">بياناتك</small>على حسابك الخاص. ملكك دائمًا.</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">الذكاء الاصطناعي</small>يقرأ بياناتك ويكتشف نقاط التعطّل</span></div></div>
+      </div>
+      <div class="vs-punch">
+        <p class="vs-quote">البرنامج المجاني مثل الطوب المجاني. <em>لا بدّ أن يبني أحدٌ البيت.</em></p>
+        <a class="btn btn-solid" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A3%D9%86%20%D8%A3%D8%B9%D8%B1%D9%81%20%D9%85%D8%A7%20%D9%8A%D9%85%D9%83%D9%86%D9%83%D9%85%20%D8%A8%D9%86%D8%A7%D8%A4%D9%87%20%D9%84%D8%B4%D8%B1%D9%83%D8%AA%D9%8A." target="_blank" rel="noopener">اكتشف ما سنبنيه لك <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
   <section class="section band" id="how" aria-labelledby="how-h">
     <div class="wrap">
       <div class="head">
@@ -885,53 +1145,6 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
           <li><h3>التدريب والدعم</h3><p>يتعلّم فريقك استخدامه عمليًا، ونبقى متاحين للتحديثات والمساعدة.</p></li>
         </ol>
       </div>
-    </div>
-  </section>
-
-  <section class="section band alt" id="packages" aria-labelledby="packages-h">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">الباقات</span>
-        <h2 id="packages-h">باقة لكل حجم من الأعمال</h2>
-        <p class="lead">تتضمن كل باقة إعدادًا لمرة واحدة وخطة شهرية للدعم والتحديثات. تواصل معنا للحصول على عرض سعر حسب احتياجاتك.</p>
-      </div>
-      <div class="packs">
-        <article class="pack">
-          <span class="id">البداية</span>
-          <h3>للأعمال الصغيرة</h3>
-          <p class="for">المتاجر، التجار الصغار والعيادات</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>وحدتا المبيعات والمخزون</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>إعداد جاهز وإطلاق سريع</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>دعم شهري</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A8%D8%AF%D8%A7%D9%8A%D8%A9." target="_blank" rel="noopener">اطلب عرض سعر</a>
-        </article>
-        <article class="pack mid">
-          <span class="id">الأعمال · الأكثر طلبًا</span>
-          <h3>للشركات النامية</h3>
-          <p class="for">شركات التوزيع والتجارة</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>وحدات المبيعات والمخزون والموارد البشرية</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>مُعدَّل حسب سير عملك</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>تقارير ولوحات متابعة للإدارة</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>دعم بأولوية</li>
-          </ul>
-          <a class="btn btn-tan" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84." target="_blank" rel="noopener">اطلب عرض سعر</a>
-        </article>
-        <article class="pack">
-          <span class="id">المحترفة</span>
-          <h3>للمصانع</h3>
-          <p class="for">المصانع وشركات الإنتاج</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>كل الوحدات، حسب الطلب بالكامل</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>تخطيط الإنتاج واحتساب التكاليف</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>أتمتة بالذكاء الاصطناعي مشمولة</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>دعم مخصّص</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20EYB%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%20%D9%84%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D8%AD%D8%AA%D8%B1%D9%81%D8%A9." target="_blank" rel="noopener">اطلب عرض سعر</a>
-        </article>
-      </div>
       <div class="trust">
         <div><svg viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 4.8-3.4 8.7-8 10-4.6-1.3-8-5.2-8-10v-6z"/></svg><strong>بياناتك تبقى ملكك</strong><span>نوقّع اتفاقية سرية قبل البدء، ونظامك يعمل على حسابك الخاص.</span></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/></svg><strong>دعم حقيقي</strong><span>تواصل معنا عبر واتساب، عن بُعد أو في موقعك، أينما كنت.</span></div>
@@ -940,6 +1153,7 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
       </div>
     </div>
   </section>
+
 
   <section class="contact on-navy band-navy" id="contact" aria-labelledby="contact-h">
     <div class="wrap contact-grid">
@@ -968,7 +1182,7 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
       <p>أنظمة ERP وذكاء اصطناعي ومواقع إلكترونية للشركات النامية.</p>
     </div>
     <div><h4>الوحدات</h4><ul><li><a href="sales.html">المبيعات</a></li><li><a href="stock.html">المخزون</a></li><li><a href="hr.html">الموارد البشرية</a></li><li><a href="ai.html">الذكاء الاصطناعي</a></li></ul></div>
-    <div><h4>الشركة</h4><ul><li><a href="#services">الخدمات</a></li><li><a href="about.html">من نحن</a></li><li><a href="#work">دراسة حالة</a></li><li><a href="#how">طريقة العمل</a></li><li><a href="#packages">الباقات</a></li><li><a href="faq.html">الأسئلة الشائعة</a></li><li><a href="start.html">استبيان المشروع</a></li></ul></div>
+    <div><h4>الشركة</h4><ul><li><a href="#services">الخدمات</a></li><li><a href="#industries">القطاعات</a></li><li><a href="about.html">من نحن</a></li><li><a href="#work">دراسة حالة</a></li><li><a href="#how">طريقة العمل</a></li><li><a href="faq.html">الأسئلة الشائعة</a></li><li><a href="start.html">استبيان المشروع</a></li></ul></div>
     <div><h4>تواصل معنا</h4><ul><li><a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">+961 81 219 712</a></li><li><a href="mailto:support@eybsystems.com">support@eybsystems.com</a></li><li>لبنان</li></ul></div>
   </div>
   <div class="wrap legal"><span>© 2026 EYB. جميع الحقوق محفوظة.</span><span class="legal-links"><a href="../privacy.html">سياسة الخصوصية</a><a href="../terms.html">الشروط</a><span>eybsystems.com</span></span></div>
@@ -1050,25 +1264,15 @@ html[dir=rtl] .row b,html[dir=rtl] .foot li,html[dir=rtl] .legal span{unicode-bi
   var marks = document.querySelectorAll('.pr-mark i');
   var empty = document.getElementById('prEmpty'), body = document.getElementById('prBody');
   var pkg = document.getElementById('prPkg'), why = document.getElementById('prWhy'), list = document.getElementById('prList'), send = document.getElementById('prSend');
-  var WHY = {
-    'البداية': 'إعداد جاهز للأساسيات، سريع الإطلاق.',
-    'الأعمال': 'عدة أجزاء مترابطة، مُعدّة حسب طريقة عمل فريقك.',
-    'المحترفة': 'نظام حسب الطلب بالكامل، مع الإنتاج والأتمتة.',
-    'موقع إلكتروني': 'موقع احترافي، جاهز للربط بنظامك لاحقًا.'
-  };
   function update(){
     var on = picks.filter(function(b){ return b.getAttribute('aria-pressed') === 'true'; });
     var keys = on.map(function(b){ return b.dataset.k; }), names = on.map(function(b){ return b.dataset.name; });
     for (var i = 0; i < marks.length; i++) marks[i].classList.toggle('on', i < Math.min(keys.length, 4));
     if (!keys.length){ empty.hidden = false; body.hidden = true; send.classList.add('is-off'); send.setAttribute('aria-disabled','true'); send.href = 'https://wa.me/96181219712'; return; }
-    var p;
-    if (keys.length === 1 && keys[0] === 'website') p = 'موقع إلكتروني';
-    else if (keys.indexOf('production') > -1 || keys.length >= 5) p = 'المحترفة';
-    else if (keys.length <= 2 && keys.every(function(k){ return ['sales','stock','website'].indexOf(k) > -1; })) p = 'البداية';
-    else p = 'الأعمال';
-    empty.hidden = true; body.hidden = false; pkg.textContent = p; why.textContent = WHY[p];
+    var n = names.length;
+    empty.hidden = true; body.hidden = false; pkg.textContent = n === 1 ? 'جزء واحد' : n === 2 ? 'جزءان' : n + ' أجزاء';
     list.innerHTML = ''; names.forEach(function(n){ var li = document.createElement('li'); li.textContent = n; list.appendChild(li); });
-    var msg = 'مرحبًا EYB، أودّ بناء نظام يتضمن: ' + names.join('، ') + '. الباقة المقترحة: ' + p + '.';
+    var msg = 'مرحبًا EYB، أودّ بناء نظام يتضمن: ' + names.join('، ') + '.';
     send.href = 'https://wa.me/96181219712?text=' + encodeURIComponent(msg); send.classList.remove('is-off'); send.removeAttribute('aria-disabled');
   }
   picks.forEach(function(b){ b.addEventListener('click', function(){ b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); }); });
@@ -1116,6 +1320,80 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') document.querySelectorAll('details.lang-dd[open]').forEach(function(d){ d.removeAttribute('open'); });
 });
 </script>
+<script>
+(function(){
+  var vs = document.getElementById('vsGrid');
+  if (!vs) return;
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.vs-switch button'));
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    vs.setAttribute('data-show', b.dataset.col);
+    btns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+  }); });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  vs.classList.add('anim');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ vs.classList.add('seen'); io.disconnect(); } }); }, {threshold: .2});
+  io.observe(vs);
+})();
+</script>
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tour-tab'));
+  if (!tabs.length) return;
+  var vid = document.getElementById('tourVideo'), ctrl = document.getElementById('tourCtrl');
+  var playBtn = document.getElementById('tcPlay'), seek = document.getElementById('tcSeek'), time = document.getElementById('tcTime');
+  var cap = document.getElementById('tourCap'), tourPane = document.getElementById('tour-p-tour');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var inView = false, userPaused = reduce, seeking = false;
+  function fmt(s){ s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
+  function sync(){
+    var d = vid.duration || 0, t = vid.currentTime || 0;
+    if (d) seek.max = d;
+    if (!seeking) seek.value = t;
+    seek.style.setProperty('--p', (d ? t / d * 100 : 0) + '%');
+    time.textContent = fmt(t) + ' / ' + (d ? fmt(d) : '0:44');
+    var p = vid.paused;
+    playBtn.classList.toggle('is-paused', p);
+    playBtn.setAttribute('aria-label', p ? ctrl.dataset.play : ctrl.dataset.pause);
+  }
+  function play(){ var pr = vid.play(); if (pr && pr.catch) pr.catch(function(){}); }
+  function auto(){ if (inView && !tourPane.hidden && !userPaused) play(); else vid.pause(); }
+  function toggle(){ if (vid.paused){ userPaused = false; play(); } else { userPaused = true; vid.pause(); } }
+  function jump(s){ var d = vid.duration || 0; vid.currentTime = Math.min(Math.max(0, vid.currentTime + s), d ? d - 0.1 : 0); sync(); }
+  function show(t){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    cap.textContent = t.dataset.cap;
+    if (vid){ ctrl.hidden = t.dataset.k !== 'tour'; auto(); }
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ show(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (document.dir === 'rtl') d = -d;
+      if (!d) return;
+      e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); show(n);
+    });
+  });
+  if (!vid) return;
+  vid.removeAttribute('controls'); ctrl.hidden = false;
+  playBtn.addEventListener('click', toggle);
+  vid.addEventListener('click', toggle);
+  document.getElementById('tcBack').addEventListener('click', function(){ jump(-5); });
+  document.getElementById('tcFwd').addEventListener('click', function(){ jump(5); });
+  seek.addEventListener('input', function(){ seeking = true; vid.currentTime = +seek.value; sync(); });
+  seek.addEventListener('change', function(){ seeking = false; });
+  ['timeupdate', 'loadedmetadata', 'play', 'pause', 'seeked'].forEach(function(ev){ vid.addEventListener(ev, sync); });
+  sync();
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ inView = e.isIntersecting; auto(); }); }, {threshold: .35}).observe(vid);
+  } else { inView = true; auto(); }
+})();
+</script>
 <script src="../mobile-nav.js?v=4"></script>
+<script src="../analytics.js?v=1" defer></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EYB Systems | Élevez votre entreprise</title>
-<meta name="description" content="EYB conçoit des ERP sur mesure, des automatisations IA et des sites web pour les entreprises en croissance.">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="description" content="EYB conçoit des ERP sur mesure, la comptabilité, des automatisations IA, des sites web et des applications mobiles pour les entreprises en croissance.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
 <meta property="og:title" content="EYB Systems | Élevez votre entreprise">
-<meta property="og:description" content="EYB conçoit des ERP sur mesure, des automatisations IA et des sites web pour les entreprises en croissance.">
+<meta property="og:description" content="EYB conçoit des ERP sur mesure, la comptabilité, des automatisations IA, des sites web et des applications mobiles pour les entreprises en croissance.">
 <meta property="og:image" content="https://eybsystems.com/social.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,7 +139,6 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 /* pain */
 .pain-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .pain-card{border:1px solid var(--line);border-radius:20px;padding:26px;background:var(--paper);display:flex;flex-direction:column;gap:10px}
-.pain-card .was{font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tan-deep)}
 .pain-card strong{font-family:var(--font-display);font-size:20px;line-height:1.25}
 .pain-card span{color:var(--muted);font-size:15px}
 .pain-card .now{margin-top:auto;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;font-weight:600;display:flex;gap:8px;align-items:flex-start}
@@ -190,7 +189,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rg
 @media (max-width:520px){.feats{grid-template-columns:minmax(0,1fr)}.tab{padding:12px}.tab small{display:none}}
 
 /* services */
-.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .service{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .service .ico{width:44px;height:44px;border-radius:12px;background:var(--navy);display:grid;place-items:center}
 .service .ico svg{width:22px;height:22px}
@@ -629,6 +628,161 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 .lang-menu small{font-family:var(--font-mono);font-size:11px;opacity:.7}
 @media (max-width:640px){.lang-dd summary .globe{display:none}.lang-dd summary{padding:0 10px}}
 @media (max-width:480px){.cta-l{display:none}.cta-s{display:inline}.nav-cta{padding:0 14px}.nav-left{gap:12px}.nav-right{gap:8px}}
+
+/* ===== integrations hub ===== */
+.hub-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:center;margin-top:64px;padding-top:56px;border-top:1px solid var(--line)}
+.hub-copy{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.hub-copy h3{font-size:clamp(26px,3.2vw,36px)}
+.hub-copy p{color:var(--muted);font-size:17px;max-width:46ch}
+.hub-copy .btn{margin-top:8px}
+.hub{position:relative;justify-self:end;width:100%;max-width:520px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;padding:22px;background:var(--navy);border-radius:28px;background-image:radial-gradient(rgba(245,248,252,.08) 1px,transparent 1px);background-size:18px 18px;box-shadow:0 40px 80px -40px rgba(15,30,61,.7)}
+.hub-lines{position:absolute;top:22px;left:22px;width:calc(100% - 44px);height:calc(100% - 44px);pointer-events:none;overflow:visible}
+.hub-lines line{stroke:#22D3EE;stroke-opacity:.6;stroke-width:1.6;stroke-dasharray:3 5;animation:hubFlow 1.2s linear infinite}
+@keyframes hubFlow{to{stroke-dashoffset:-16}}
+.hub-node{position:relative;z-index:1;aspect-ratio:1/1;min-width:0;background:var(--beige);color:var(--navy);border-radius:18px;padding:12px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;transition:transform .2s ease}
+.hub-node:hover{transform:translateY(-3px)}
+.hn-ic{width:38px;height:38px;border-radius:11px;background:var(--sand);display:grid;place-items:center;flex:none}
+.hn-ic svg{width:20px;height:20px}
+.hub-node b{font-family:var(--font-display);font-size:15px;line-height:1.2}
+.hub-node small{font-size:12px;line-height:1.35;color:var(--muted)}
+.hub-node.more{background:transparent;border:1.5px dashed rgba(245,248,252,.35);color:var(--beige)}
+.hub-node.more .hn-ic{background:transparent;border:1.5px dashed rgba(245,248,252,.45);color:var(--tan)}
+.hub-node.more small{color:var(--on-navy-dim)}
+.hub-core{position:relative;z-index:1;aspect-ratio:1/1;border-radius:22px;background:var(--navy-2);border:1.5px solid var(--tan);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--beige);font-family:var(--font-display);font-weight:700;font-size:20px;animation:corePulse 2.4s infinite}
+.hub-core svg{width:54px;height:54px}
+@keyframes corePulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,.45)}70%{box-shadow:0 0 0 18px rgba(34,211,238,0)}100%{box-shadow:0 0 0 0 rgba(34,211,238,0)}}
+@media (min-width:901px) and (max-width:1100px){.hub-node small{display:none}}
+@media (max-width:900px){.hub-wrap{grid-template-columns:minmax(0,1fr)}.hub{justify-self:start}}
+@media (max-width:560px){.hub{gap:18px;padding:14px;border-radius:22px}.hub-lines{top:14px;left:14px;width:calc(100% - 28px);height:calc(100% - 28px)}.hub-node{padding:8px 6px;border-radius:14px;gap:4px}.hub-node small{display:none}.hub-node b{font-size:12.5px}.hn-ic{width:30px;height:30px;border-radius:9px}.hn-ic svg{width:17px;height:17px}.hub-core{font-size:15px;border-radius:16px}.hub-core svg{width:36px;height:36px}}
+
+/* ===== industries ===== */
+.ind-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ind{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .2s ease,border-color .2s ease}
+.ind:hover{transform:translateY(-4px);border-color:var(--navy)}
+.ind-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.ind-ic{width:46px;height:46px;border-radius:12px;background:var(--navy);display:grid;place-items:center;flex:none}
+.ind-ic svg{width:22px;height:22px}
+.ind p{color:var(--muted);font-size:15px}
+.ind ul{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px dashed var(--line);display:grid;gap:7px;font-family:var(--font-mono);font-size:12.5px}
+.ind li::before{content:"+ ";color:var(--tan-deep)}
+.ind.featured{background:var(--navy);color:var(--beige);border-color:var(--navy);background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:18px 18px}
+.ind.featured:hover{border-color:var(--tan)}
+.ind.featured p{color:var(--on-navy)}
+.ind.featured ul{border-top-color:rgba(245,248,252,.18)}
+.ind.featured li::before{color:var(--tan)}
+.ind.featured .ind-ic{background:var(--tan)}
+.ind-proof{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;font-weight:600;color:var(--tan);background:rgba(34,211,238,.14);border:1px solid rgba(34,211,238,.45);border-radius:999px;padding:5px 10px;text-decoration:none;white-space:nowrap}
+.ind-proof:hover{background:rgba(34,211,238,.26)}
+.ind-proof .dot{width:6px;height:6px}
+.ind-more{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px;padding:22px 26px;border:1.5px dashed var(--tan-deep);border-radius:20px}
+.ind-more p{color:var(--muted);max-width:70ch}
+.ind-more b{color:var(--navy);font-family:var(--font-display);font-size:17px}
+@media (max-width:1000px){.ind-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ind-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== compare ===== */
+.vs{display:grid;grid-template-columns:minmax(0,.75fr) repeat(3,minmax(0,1fr));grid-template-rows:repeat(7,auto);column-gap:14px;padding-top:16px}
+.vs-col{grid-row:1/span 7;display:grid;grid-template-rows:subgrid;position:relative;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:22px}
+.vs-head{padding:22px 22px 18px;display:flex;flex-direction:column;gap:6px;border-bottom:1px solid var(--line)}
+.vs-head h3{display:flex;align-items:center;gap:10px;font-size:20px}
+.vs-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}
+.vs-ic svg{width:18px;height:18px}
+.vs-ic.xl{background:#1D7A46}
+.vs-ic.shelf{background:#64748B}
+.vs-ic.logo svg{width:34px;height:34px}
+.vs-tag{font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.vs-cell{padding:15px 22px;display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--muted);border-top:1px dashed var(--line)}
+.vs-head+.vs-cell{border-top:0}
+.vs-i{flex:none;width:22px;height:22px;border-radius:7px;display:grid;place-items:center;margin-top:1px}
+.vs-i svg{width:12px;height:12px}
+.vs-no .vs-i{background:#FDE8E8;color:#B42318}
+.vs-meh .vs-i{background:#FEF0C7;color:#B54708}
+.vs-yes .vs-i{background:var(--tan);color:var(--navy)}
+.vs-l{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.vs-labels{background:transparent;border-color:transparent}
+.vs-labels .vs-head{border-bottom-color:var(--line)}
+.vs-labels .vs-cell{align-items:center;padding-inline:4px;font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.vs-col.eyb{background:var(--navy);color:var(--beige);border-color:var(--navy);transform:translateY(-14px);box-shadow:0 34px 60px -30px rgba(15,30,61,.75);background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:18px 18px}
+.vs-col.eyb .vs-head{border-bottom-color:rgba(245,248,252,.14)}
+.vs-col.eyb .vs-tag{color:var(--tan)}
+.vs-col.eyb .vs-cell{color:var(--beige);font-weight:600;border-top-color:rgba(245,248,252,.12)}
+.vs-sticker{position:absolute;top:-15px;right:16px;z-index:2;background:var(--tan);color:var(--navy);font-family:var(--font-mono);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:10px;transform:rotate(6deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.45)}
+.vs-switch{display:none;gap:6px;padding:5px;margin-bottom:30px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.vs-switch button{all:unset;box-sizing:border-box;flex:1;min-height:44px;padding:0 8px;border-radius:10px;display:grid;place-items:center;text-align:center;cursor:pointer;font-weight:700;font-size:14px;color:var(--navy)}
+.vs-switch button[aria-pressed="true"]{background:var(--navy);color:var(--beige)}
+.vs-switch button:focus-visible{outline:3px solid var(--tan);outline-offset:2px}
+.vs-punch{margin-top:40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:28px 32px;background:var(--paper);border:1px solid var(--line);border-radius:22px}
+.vs-quote{font-family:var(--font-display);font-weight:700;font-size:clamp(20px,2.4vw,26px);line-height:1.3;max-width:34ch}
+.vs-quote em{font-style:normal;color:var(--tan-deep)}
+.vs.anim .vs-cell{opacity:0}
+.vs-cell:nth-child(2){--i:0}.vs-cell:nth-child(3){--i:1}.vs-cell:nth-child(4){--i:2}.vs-cell:nth-child(5){--i:3}.vs-cell:nth-child(6){--i:4}.vs-cell:nth-child(7){--i:5}
+.vs-col.shelf{--c:1}.vs-col.eyb{--c:2}
+.vs.anim.seen .vs-cell{animation:rise .45s ease-out both;animation-delay:calc(var(--i,0) * 70ms + var(--c,0) * 160ms)}
+.vs.anim.seen .vs-yes .vs-i{animation:popIn .45s cubic-bezier(.3,1.4,.5,1) both;animation-delay:calc(var(--i,0) * 70ms + var(--c,0) * 160ms + 200ms)}
+@media (max-width:860px){
+  .vs-switch{display:flex}
+  .vs{display:block;padding-top:0}
+  .vs-labels{display:none}
+  .vs-col{display:none;transform:none}
+  .vs-col.eyb{transform:none}
+  .vs[data-show="excel"] .vs-col.excel,.vs[data-show="shelf"] .vs-col.shelf,.vs[data-show="eyb"] .vs-col.eyb{display:block}
+  .vs-col .vs-cell{--c:0}
+  .vs-l{position:static;width:auto;height:auto;overflow:visible;clip:auto;clip-path:none;white-space:normal;display:block;margin-bottom:2px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .vs-col.eyb .vs-l{color:var(--on-navy-dim)}
+  .vs-cell{padding:14px 20px}
+  .vs-head{padding:20px}
+  .vs-punch{padding:24px 22px}
+}
+
+/* ===== case study numbers ===== */
+.work-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.live-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--tan);background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.4);border-radius:999px;padding:5px 12px}
+.live-chip .dot{width:6px;height:6px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+.stat{border:1px solid rgba(245,248,252,.16);background:rgba(15,30,61,.6);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.stat b{font-family:var(--font-display);font-size:clamp(28px,3vw,36px);line-height:1;color:var(--tan);white-space:nowrap}
+.stat span{font-size:13.5px;line-height:1.4;color:var(--on-navy)}
+@media (max-width:520px){.stats{grid-template-columns:minmax(0,1fr)}.stat{flex-direction:row;align-items:center;gap:14px}.stat b{min-width:112px}}
+
+/* ===== product tour ===== */
+.tour{background:#0F1E3D;color:#F5F8FC;position:relative;overflow:hidden}
+.tour::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.tour .wrap{position:relative}
+.tour-tabs{display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;scrollbar-width:none;padding:3px}
+.tour-tabs::-webkit-scrollbar{display:none}
+.tour-tab{all:unset;box-sizing:border-box;flex:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;border:1px solid rgba(245,248,252,.2);color:#F5F8FC;font-weight:600;font-size:15px;white-space:nowrap;transition:background .15s ease,border-color .15s ease}
+.tour-tab:hover{background:rgba(245,248,252,.07)}
+.tour-tab:focus-visible{outline:3px solid #22D3EE;outline-offset:2px}
+.tour-tab[aria-selected="true"]{background:#22D3EE;border-color:#22D3EE;color:#0F1E3D}
+.tour-frame{background:#1B2C52;border:1px solid rgba(245,248,252,.14);border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.tour-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(245,248,252,.1);font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+.tour-bar .lights{display:flex;gap:6px}.tour-bar .lights i{width:9px;height:9px;border-radius:50%;background:#24375F}
+.tour-view{position:relative;aspect-ratio:16/10;background:#F5F8FC}
+.tour-pane{position:absolute;inset:0}
+.tour-pane a{display:block;height:100%}
+.tour-pane video,.tour-pane img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.tour-pane video{cursor:pointer}
+.tour-ctrl{display:flex;align-items:center;gap:8px;padding:10px 12px;border-top:1px solid rgba(245,248,252,.1)}
+.tour-ctrl[hidden]{display:none}
+.tc-btn{all:unset;box-sizing:border-box;cursor:pointer;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:3px;min-width:44px;height:40px;padding:0 10px;border-radius:10px;color:#F5F8FC;font-family:var(--font-mono);font-size:11.5px;font-weight:600;border:1px solid rgba(245,248,252,.18)}
+.tc-btn:hover{background:rgba(245,248,252,.08)}
+.tc-btn:focus-visible{outline:3px solid #22D3EE;outline-offset:2px}
+.tc-btn svg{width:14px;height:14px}
+.tc-main{background:#22D3EE;border-color:#22D3EE;color:#0F1E3D}
+.tc-main:hover{background:#67E8F9}
+.tc-main .i-play{display:none}
+.tc-main.is-paused .i-play{display:block}
+.tc-main.is-paused .i-pause{display:none}
+.tc-seek{flex:1;min-width:0;height:24px;margin:0 4px;background:transparent;cursor:pointer;-webkit-appearance:none;appearance:none;--p:0%}
+.tc-seek::-webkit-slider-runnable-track{height:6px;border-radius:3px;background:linear-gradient(90deg,#22D3EE var(--p),rgba(245,248,252,.2) var(--p))}
+.tc-seek::-moz-range-track{height:6px;border-radius:3px;background:linear-gradient(90deg,#22D3EE var(--p),rgba(245,248,252,.2) var(--p))}
+.tc-seek::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;margin-top:-5px;border-radius:50%;background:#F5F8FC;border:3px solid #22D3EE}
+.tc-seek::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:#F5F8FC;border:3px solid #22D3EE}
+.tc-seek:focus-visible{outline:3px solid #22D3EE;outline-offset:2px;border-radius:6px}
+.tc-time{flex:none;font-family:var(--font-mono);font-size:12px;color:#CBD5E1;min-width:84px;text-align:right}
+.tour-cap{margin-top:16px;font-size:16px;color:#CBD5E1;max-width:70ch}
+.tour-note{margin-top:6px;font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+@media (max-width:560px){.tour-frame{border-radius:16px}.tour-tab{padding:0 14px;font-size:14px}.tc-btn{min-width:40px;padding:0 8px}.tc-btn span{display:none}.tc-time{min-width:0;font-size:11px}}
 </style>
 <link rel="stylesheet" href="../mobile-nav.css?v=4">
 </head>
@@ -644,7 +798,6 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
         </div>
         <a href="#services">Services</a>
         <a href="#work">Nos réalisations</a>
-        <a href="#packages">Offres</a>
         <a href="about.html">À propos</a>
       </nav>
     </div>
@@ -713,9 +866,9 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
         <h2 id="pain-h">Ça vous parle ?</h2>
       </div>
       <div class="pain-grid">
-        <div class="pain-card"><span class="was">Aujourd'hui</span><strong>Trop de fichiers Excel</strong><span>Chaque service a ses propres fichiers, et aucun ne correspond. Trouver la bonne version prend plus de temps que le travail lui-même.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : une seule source fiable pour tous</span></div>
-        <div class="pain-card"><span class="was">Aujourd'hui</span><strong>Trop de plateformes</strong><span>La comptabilité dans un logiciel, les commandes sur WhatsApp, les rapports ailleurs. Rien ne communique.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : tout dans un seul système connecté</span></div>
-        <div class="pain-card"><span class="was">Aujourd'hui</span><strong>Trop d'erreurs humaines</strong><span>Saisir les mêmes données encore et encore mène à des factures erronées, des rapports incohérents et de l'argent perdu.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : saisissez une fois, le système fait le reste</span></div>
+        <div class="pain-card"><strong>Trop de fichiers Excel</strong><span>Chaque service a ses propres fichiers, et aucun ne correspond. Trouver la bonne version prend plus de temps que le travail lui-même.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : une seule source fiable pour tous</span></div>
+        <div class="pain-card"><strong>Trop de plateformes</strong><span>La comptabilité dans un logiciel, les commandes sur WhatsApp, les rapports ailleurs. Rien ne communique.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : tout dans un seul système connecté</span></div>
+        <div class="pain-card"><strong>Trop d'erreurs humaines</strong><span>Saisir les mêmes données encore et encore mène à des factures erronées, des rapports incohérents et de l'argent perdu.</span><span class="now"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec EYB : saisissez une fois, le système fait le reste</span></div>
       </div>
     
       <div class="ba-wrap">
@@ -738,12 +891,32 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
     </div>
   </section>
 
+  <section class="section tour on-navy band-navy" id="tour" aria-labelledby="tour-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Visite guidée</span>
+        <h2 id="tour-h">Voyez-le en action</h2>
+        <p class="lead">Un vrai système EYB avec des données de démonstration : projets, planning, stock, RH, statistiques et un catalogue pour vos clients.</p>
+      </div>
+      <div class="tour-tabs" role="tablist" aria-label="Parties du système"><button class="tour-tab" type="button" role="tab" id="tour-t-tour" aria-controls="tour-p-tour" aria-selected="true" tabindex="0" data-k="tour" data-cap="Une visite rapide du système. Mettez en pause, reculez ou avancez à tout moment."><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z"/></svg>Visite</button><button class="tour-tab" type="button" role="tab" id="tour-t-jobs" aria-controls="tour-p-jobs" aria-selected="false" tabindex="-1" data-k="jobs" data-cap="Tous les projets en cours sur un seul écran : client, ingénieurs, date de livraison et étape.">Projets</button><button class="tour-tab" type="button" role="tab" id="tour-t-job" aria-controls="tour-p-job" aria-selected="false" tabindex="-1" data-k="job" data-cap="Cliquez sur un projet pour voir ses étapes mécaniques et électriques, avec les dates.">Suivi d’un projet</button><button class="tour-tab" type="button" role="tab" id="tour-t-planning" aria-controls="tour-p-planning" aria-selected="false" tabindex="-1" data-k="planning" data-cap="Les tâches de chaque projet, qui y travaille et leur avancement.">Planning</button><button class="tour-tab" type="button" role="tab" id="tour-t-stock" aria-controls="tour-p-stock" aria-selected="false" tabindex="-1" data-k="stock" data-cap="Le catalogue de stock avec chaque taille, la quantité disponible et l’emplacement.">Stock</button><button class="tour-tab" type="button" role="tab" id="tour-t-stats" aria-controls="tour-p-stats" aria-selected="false" tabindex="-1" data-k="stats" data-cap="Pour la direction : le système repère ce qui ralentit l’entreprise et indique quoi faire.">Problèmes et améliorations</button><button class="tour-tab" type="button" role="tab" id="tour-t-catalogue" aria-controls="tour-p-catalogue" aria-selected="false" tabindex="-1" data-k="catalogue" data-cap="Pour vos clients : une tablette dans votre showroom où ils parcourent vos produits, tailles et prix.">Catalogue clients</button><button class="tour-tab" type="button" role="tab" id="tour-t-hr" aria-controls="tour-p-hr" aria-selected="false" tabindex="-1" data-k="hr" data-cap="Fiches employés avec poste, salaire et solde de congés.">RH</button></div>
+      <div class="tour-frame">
+        <div class="tour-bar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>eyb / demo</span><span class="live"><i class="dot"></i>live</span></div>
+        <div class="tour-view">
+          <div class="tour-pane" role="tabpanel" id="tour-p-tour" aria-labelledby="tour-t-tour"><video id="tourVideo" muted loop playsinline controls preload="metadata" poster="../media/erp-tour-poster.webp" aria-label="Vidéo de présentation du système EYB"><source src="../media/eyb-erp-tour.mp4" type="video/mp4"></video></div><div class="tour-pane" role="tabpanel" id="tour-p-jobs" aria-labelledby="tour-t-jobs" hidden><a href="../media/erp-jobs.webp" target="_blank" rel="noopener"><img src="../media/erp-jobs.webp" alt="Tous les projets en cours sur un seul écran : client, ingénieurs, date de livraison et étape." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-job" aria-labelledby="tour-t-job" hidden><a href="../media/erp-job-timeline.webp" target="_blank" rel="noopener"><img src="../media/erp-job-timeline.webp" alt="Cliquez sur un projet pour voir ses étapes mécaniques et électriques, avec les dates." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-planning" aria-labelledby="tour-t-planning" hidden><a href="../media/erp-planning.webp" target="_blank" rel="noopener"><img src="../media/erp-planning.webp" alt="Les tâches de chaque projet, qui y travaille et leur avancement." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-stock" aria-labelledby="tour-t-stock" hidden><a href="../media/erp-stock.webp" target="_blank" rel="noopener"><img src="../media/erp-stock.webp" alt="Le catalogue de stock avec chaque taille, la quantité disponible et l’emplacement." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-stats" aria-labelledby="tour-t-stats" hidden><a href="../media/erp-stats.webp" target="_blank" rel="noopener"><img src="../media/erp-stats.webp" alt="Pour la direction : le système repère ce qui ralentit l’entreprise et indique quoi faire." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-catalogue" aria-labelledby="tour-t-catalogue" hidden><a href="../media/erp-catalogue.webp" target="_blank" rel="noopener"><img src="../media/erp-catalogue.webp" alt="Pour vos clients : une tablette dans votre showroom où ils parcourent vos produits, tailles et prix." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="tour-pane" role="tabpanel" id="tour-p-hr" aria-labelledby="tour-t-hr" hidden><a href="../media/erp-hr.webp" target="_blank" rel="noopener"><img src="../media/erp-hr.webp" alt="Fiches employés avec poste, salaire et solde de congés." width="1600" height="1000" loading="lazy" decoding="async"></a></div>
+        </div>
+        <div class="tour-ctrl" id="tourCtrl" dir="ltr" hidden data-play="Lecture" data-pause="Pause"><button type="button" class="tc-btn tc-main" id="tcPlay" aria-label="Lecture"><svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z"/></svg><svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/></svg></button><button type="button" class="tc-btn" id="tcBack" aria-label="Reculer de 5 secondes" title="Reculer de 5 secondes"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 3.5L2.5 8 8 12.5zM14 3.5L8.5 8 14 12.5z"/></svg><span>5s</span></button><button type="button" class="tc-btn" id="tcFwd" aria-label="Avancer de 5 secondes" title="Avancer de 5 secondes"><span>5s</span><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 3.5L13.5 8 8 12.5zM2 3.5L7.5 8 2 12.5z"/></svg></button><input type="range" class="tc-seek" id="tcSeek" min="0" max="44" step="0.1" value="0" aria-label="Position dans la vidéo"><span class="tc-time" id="tcTime">0:00 / 0:44</span></div>
+      </div>
+      <p class="tour-cap" id="tourCap" aria-live="polite">Une visite rapide du système. Mettez en pause, reculez ou avancez à tout moment.</p>
+      <p class="tour-note">Données de démonstration : tous les noms, entreprises et chiffres sont fictifs.</p>
+    </div>
+  </section>
+
   <section class="section band" id="services" aria-labelledby="services-h">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">Services</span>
         <h2 id="services-h">Ce que nous vous offrons</h2>
-        <p class="lead">D'un simple site web à un système complet pour toute l'entreprise. Tout ce que nous créons est connecté, pour grandir pas à pas.</p>
+        <p class="lead">D'un simple site web ou d'une application à un système complet pour toute l'entreprise. Tout ce que nous créons est connecté, pour grandir pas à pas.</p>
       </div>
       <div class="services">
         <article class="service">
@@ -751,6 +924,12 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
           <h3>ERP sur mesure</h3>
           <p>Un seul système pour toute votre activité, conçu autour de votre fonctionnement réel.</p>
           <ul><li>Ventes et CRM</li><li>Stock et achats</li><li>RH et paie</li><li>Production et pipeline</li></ul>
+        </article>
+        <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8v3H8z"/><path d="M8.5 14h.01M12 14h.01M15.5 14h.01M8.5 17.5h.01M12 17.5h.01M15.5 17.5h.01"/></svg></div>
+          <h3>Comptabilité</h3>
+          <p>Une comptabilité claire, connectée à vos ventes et à votre stock.</p>
+          <ul><li>Factures et paiements</li><li>Dépenses et TVA</li><li>Rapports financiers</li></ul>
         </article>
         <article class="service">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div>
@@ -765,6 +944,12 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
           <ul><li>Sites d'entreprise</li><li>Adapté au mobile</li><li>Connecté à l'ERP</li></ul>
         </article>
         <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
+          <h3>Applications mobiles</h3>
+          <p>Votre propre application pour votre équipe ou vos clients, sur Android et iPhone.</p>
+          <ul><li>Android et iPhone</li><li>Apps équipe et clients</li><li>Connectée à votre système</li></ul>
+        </article>
+        <article class="service">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></div>
           <h3>Conseil</h3>
           <p>Nous analysons le fonctionnement actuel de votre entreprise et vous montrons quoi améliorer en premier.</p>
@@ -775,6 +960,18 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
           <a class="btn btn-ghost" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20j%27ai%20besoin%20d%27une%20solution%20sur%20mesure%20pour%20mon%20entreprise%20%3A" target="_blank" rel="noopener">Dites-nous ce qu'il vous faut</a>
         </article>
       </div>
+      <div class="hub-wrap">
+        <div class="hub-copy">
+          <span class="eyebrow">Connecté</span>
+          <h3>Fonctionne avec les outils que vous utilisez déjà</h3>
+          <p>Votre équipe garde WhatsApp, l'e-mail et Excel. EYB s'y connecte, pour que l'information arrive dans un seul système au lieu de se perdre entre les applications.</p>
+          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20votre%20syst%C3%A8me%20peut-il%20se%20connecter%20aux%20outils%20que%20nous%20utilisons%20%3F" target="_blank" rel="noopener">Parlez-nous de vos outils</a>
+        </div>
+        <div class="hub" role="list" aria-label="Outils auxquels EYB se connecte">
+          <svg class="hub-lines" viewBox="0 0 300 300" aria-hidden="true"><line x1="44" y1="44" x2="150" y2="150"/><line x1="150" y1="44" x2="150" y2="150"/><line x1="256" y1="44" x2="150" y2="150"/><line x1="44" y1="150" x2="150" y2="150"/><line x1="256" y1="150" x2="150" y2="150"/><line x1="44" y1="256" x2="150" y2="150"/><line x1="150" y1="256" x2="150" y2="150"/><line x1="256" y1="256" x2="150" y2="150"/></svg>
+          <div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 10h6M9 13.5h4"/></svg></span><b>WhatsApp</b><small>Alertes, rapports et assistant IA</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg></span><b>E-mail</b><small>Factures fournisseurs captées dans votre boîte</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 14.5h18M9 4v16"/></svg></span><b>Excel</b><small>Vos anciens fichiers importés dès le premier jour</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg></span><b>PDF et scans</b><small>Documents lus et enregistrés pour vous</small></div><div class="hub-core" aria-hidden="true"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#24375F"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg><span>eyb</span></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7V4h3M18 4h3v3M21 17v3h-3M6 20H3v-3"/><path d="M7.5 8v8M10.5 8v8M13.5 8v8M16.5 8v8"/></svg></span><b>Codes-barres</b><small>Étiquettes d'articles prêtes à scanner</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><b>Site web</b><small>Les demandes arrivent dans votre système</small></div><div class="hub-node" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><b>Application mobile</b><small>Votre équipe sur Android et iPhone</small></div><div class="hub-node more" role="listitem"><span class="hn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><b>Vos outils</b><small>Autre chose ? Demandez-nous.</small></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -783,18 +980,18 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
       <div class="head">
         <span class="eyebrow">Construisez votre système</span>
         <h2 id="build-h">Choisissez ce dont votre entreprise a besoin</h2>
-        <p class="lead">Touchez les éléments qui vous intéressent. Nous vous suggérons une offre, et vous pouvez nous envoyer votre choix sur WhatsApp en un geste.</p>
+        <p class="lead">Touchez les éléments qui vous intéressent et envoyez-nous votre choix sur WhatsApp en un geste. Nous en parlerons ensemble lors d'un rendez-vous gratuit.</p>
       </div>
       <div class="pick-grid">
-        <div class="pick-opts" role="group" aria-label="Éléments de votre système"><button class="pick" type="button" aria-pressed="false" data-k="sales" data-name="Ventes et CRM"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="pk-tx"><b>Ventes et CRM</b><small>Prospects, clients et relances</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="stock" data-name="Stock et achats"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="pk-tx"><b>Stock et achats</b><small>Stock en temps réel et commandes intelligentes</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="hr" data-name="RH et paie"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="pk-tx"><b>RH et paie</b><small>Équipe, présences et salaires</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="production" data-name="Production"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><span class="pk-tx"><b>Production</b><small>Planification, coûts et pipeline</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="ai" data-name="Automatisation IA"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span class="pk-tx"><b>Automatisation IA</b><small>Rapports, assistants et analyses</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="website" data-name="Site web"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><span class="pk-tx"><b>Site web</b><small>Un site connecté à votre système</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="reports" data-name="Rapports et tableaux de bord"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></span><span class="pk-tx"><b>Rapports et tableaux de bord</b><small>Des chiffres en direct pour la direction</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="custom" data-name="Quelque chose de sur mesure"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="pk-tx"><b>Quelque chose de sur mesure</b><small>Dites-nous ce qu'il vous faut</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
+        <div class="pick-opts" role="group" aria-label="Éléments de votre système"><button class="pick" type="button" aria-pressed="false" data-k="sales" data-name="Ventes et CRM"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="pk-tx"><b>Ventes et CRM</b><small>Prospects, clients et relances</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="stock" data-name="Stock et achats"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><span class="pk-tx"><b>Stock et achats</b><small>Stock en temps réel et commandes intelligentes</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="hr" data-name="RH et paie"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18 14.5c2.2.7 3.5 2.8 3.5 5.5"/></svg></span><span class="pk-tx"><b>RH et paie</b><small>Équipe, présences et salaires</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="production" data-name="Production"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><span class="pk-tx"><b>Production</b><small>Planification, coûts et pipeline</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="accounting" data-name="Comptabilité"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8v3H8z"/><path d="M8.5 14h.01M12 14h.01M15.5 14h.01M8.5 17.5h.01M12 17.5h.01M15.5 17.5h.01"/></svg></span><span class="pk-tx"><b>Comptabilité</b><small>Factures, dépenses et finances</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="ai" data-name="Automatisation IA"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><span class="pk-tx"><b>Automatisation IA</b><small>Rapports, assistants et analyses</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="website" data-name="Site web"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg></span><span class="pk-tx"><b>Site web</b><small>Un site connecté à votre système</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="app" data-name="Application mobile"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span class="pk-tx"><b>Application mobile</b><small>Votre app sur Android et iPhone</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="reports" data-name="Rapports et tableaux de bord"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-3 3 2 5-6"/></svg></span><span class="pk-tx"><b>Rapports et tableaux de bord</b><small>Des chiffres en direct pour la direction</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button><button class="pick" type="button" aria-pressed="false" data-k="custom" data-name="Quelque chose de sur mesure"><span class="pk-ic"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span class="pk-tx"><b>Quelque chose de sur mesure</b><small>Dites-nous ce qu'il vous faut</small></span><span class="pk-ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div>
         <aside class="pick-result" aria-live="polite">
           <span class="eyebrow">Votre système</span>
           <div class="pr-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <p class="pr-empty" id="prEmpty">Choisissez au moins un élément pour voir l'offre suggérée.</p>
+          <p class="pr-empty" id="prEmpty">Choisissez au moins un élément pour composer votre système.</p>
           <div class="pr-body" id="prBody" hidden>
-            <p class="pr-label">Offre suggérée</p>
-            <h3 id="prPkg">Business</h3>
-            <p class="pr-why" id="prWhy"></p>
+            <p class="pr-label">Votre sélection</p>
+            <h3 id="prPkg"></h3>
+            <p class="pr-why" id="prWhy">Nous en discutons lors d'un rendez-vous gratuit, puis nous vous envoyons un devis adapté.</p>
             <ul class="pr-list" id="prList"></ul>
           </div>
           <a class="btn btn-tan is-off" id="prSend" href="https://wa.me/96181219712" target="_blank" rel="noopener" aria-disabled="true">Envoyer mon choix sur WhatsApp</a>
@@ -807,10 +1004,11 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
     <div class="wrap">
       <div class="work on-navy">
         <div>
-          <span class="eyebrow">Étude de cas</span>
+          <div class="work-top"><span class="eyebrow">Étude de cas</span><span class="live-chip"><i class="dot"></i>En service depuis mai 2026</span></div>
           <h2 id="work-h">Conçu pour GMM, fabricant d'équipements en inox à Roumieh</h2>
           <p style="margin-top:18px">Nous avons développé l'ERP complet de GMM, remplaçant les tableurs et le suivi manuel par un seul système utilisé par toute l'équipe.</p>
-          <ul class="results"><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Beaucoup moins de fichiers Excel à gérer</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Moins d'erreurs humaines au quotidien</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Une meilleure communication entre les services</span></li></ul>
+          <div class="stats" role="list" aria-label="GMM en chiffres"><div class="stat" role="listitem"><b>~20</b><span>fichiers Excel remplacés par un seul système</span></div><div class="stat" role="listitem"><b>15 min</b><span>pour préparer la paie, contre 2 heures avant</span></div><div class="stat" role="listitem"><b>18</b><span>personnes l’utilisent, dans 5 services</span></div></div>
+          <ul class="results"><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Moins d'erreurs humaines au quotidien</span></li><li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Une meilleure communication entre les services</span></li></ul>
         </div>
         <div class="facts">
           <div class="fact"><span>Client</span><b>GMM SARL, Roumieh, Liban</b></div>
@@ -818,6 +1016,46 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
           <div class="fact"><span>Livré</span><b>ERP sur mesure</b></div>
           <div class="fact"><span>Modules</span><b>RH, stock, ventes, fabrication et pipelines</b></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band alt" id="industries" aria-labelledby="ind-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Secteurs</span>
+        <h2 id="ind-h">Conçu pour des entreprises comme la vôtre</h2>
+        <p class="lead">Aucune entreprise ne fonctionne comme une autre, alors nous construisons chaque système autour de la vôtre. Voici à quoi cela ressemble dans quelques secteurs.</p>
+      </div>
+      <div class="ind-grid">
+        <article class="ind featured">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#0F1E3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4V10l6 4V6l6 4v11z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg></span><a class="ind-proof" href="#work"><i class="dot"></i>En service chez GMM</a></div>
+          <h3>Fabrication</h3>
+          <p>De la matière première au produit fini, avec le coût réel de chaque article.</p>
+          <ul><li>Planification de la production et pipelines</li><li>Matières premières et produits finis</li><li>Coût par produit</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6h11v10h-11z"/><path d="M13.5 9.5h4l3 3V16h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg></span></div>
+          <h3>Négoce et distribution</h3>
+          <p>Sachez ce que vous avez, ce qui arrive et qui vous doit de l'argent.</p>
+          <ul><li>Stock dans tous vos entrepôts</li><li>Comparaison des prix fournisseurs</li><li>Commandes, livraisons et paiements</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0"/><path d="M5 11v9h14v-9"/><path d="M10 20v-5h4v5"/></svg></span></div>
+          <h3>Commerce de détail</h3>
+          <p>Ventes, stock et équipe, synchronisés chaque jour.</p>
+          <ul><li>Stock en direct dans chaque magasin</li><li>Fiches articles prêtes pour les codes-barres</li><li>Rapports quotidiens sur WhatsApp</li></ul>
+        </article>
+        <article class="ind">
+          <div class="ind-top"><span class="ind-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#F5F8FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg></span></div>
+          <h3>Services et entrepreneurs</h3>
+          <p>Projets, équipe et factures au même endroit.</p>
+          <ul><li>Projets et relances</li><li>Présences et paie</li><li>Factures et paiements</li></ul>
+        </article>
+      </div>
+      <div class="ind-more">
+        <p><b>Votre secteur n'est pas listé ?</b> Si votre entreprise tourne encore sur Excel, papier et WhatsApp, nous pouvons lui construire un système.</p>
+        <a class="btn btn-ghost" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20je%20voudrais%20vous%20parler%20de%20mon%20entreprise%20%3A" target="_blank" rel="noopener">Parlez-nous de votre entreprise</a>
       </div>
     </div>
   </section>
@@ -839,6 +1077,24 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
     </div>
   </section>
 
+  <section class="section band alt" id="compare" aria-labelledby="vs-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Comparer</span>
+        <h2 id="vs-h">Trois façons de gérer votre entreprise. Une seule est faite pour vous.</h2>
+        <p class="lead">Les tableurs ne coûtent rien et les logiciels standards sont prêts à l’emploi. Voici comment ils se comparent là où ça compte.</p>
+      </div>
+      <div class="vs-switch" role="group" aria-label="Choisissez une option à comparer"><button type="button" data-col="excel" aria-pressed="false">Excel</button><button type="button" data-col="shelf" aria-pressed="false">Standard</button><button type="button" data-col="eyb" aria-pressed="true">EYB</button></div>
+      <div class="vs" id="vsGrid" data-show="eyb">
+        <div class="vs-col vs-labels" aria-hidden="true"><div class="vs-head"></div><div class="vs-cell">S'adapte à vous</div><div class="vs-cell">Coût</div><div class="vs-cell">Besoin d’un changement ?</div><div class="vs-cell">Support</div><div class="vs-cell">Vos données</div><div class="vs-cell">IA</div></div><div class="vs-col excel"><div class="vs-head"><h3><span class="vs-ic xl"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M3 14.5h18M9 4v16"/></svg></span>Excel + WhatsApp</h3><span class="vs-tag">La voie « gratuite »</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">S'adapte à vous</small>Vous vous pliez au tableur</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Coût</small>Gratuit, jusqu'à ce qu'une erreur vous coûte</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Besoin d’un changement ?</small>Une colonne de plus, une version de plus</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Support</small>Demandez à celui qui a fait le fichier</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Vos données</small>Éparpillées entre ordinateurs et discussions</span></div><div class="vs-cell vs-no"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3.5 3.5l5 5M8.5 3.5l-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">IA</small>Copier, coller, recommencer</span></div></div><div class="vs-col shelf"><div class="vs-head"><h3><span class="vs-ic shelf"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>ERP standard</h3><span class="vs-tag">Taille unique</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">S'adapte à vous</small>Vous vous pliez au logiciel</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Coût</small>Licences, modules en plus et un intégrateur</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Besoin d’un changement ?</small>Faites une demande et attendez</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Support</small>Tickets et articles d'aide</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">Vos données</small>Souvent sur les serveurs de l'éditeur</span></div><div class="vs-cell vs-meh"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><small class="vs-l">IA</small>Des fonctions génériques, pour tout le monde</span></div></div><div class="vs-col eyb"><span class="vs-sticker" aria-hidden="true">Fait pour vous</span><div class="vs-head"><h3><span class="vs-ic logo"><svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#24375F"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg></span>EYB</h3><span class="vs-tag">Système sur mesure</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">S'adapte à vous</small>Le système se plie à vous</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">Coût</small>Des frais de mise en place, un abonnement mensuel</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">Besoin d’un changement ?</small>Demandez. Nous le construisons.</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">Support</small>Écrivez-nous sur WhatsApp, ou nous venons sur place</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">Vos données</small>Sur votre propre compte. Toujours à vous.</span></div><div class="vs-cell vs-yes"><span class="vs-i"><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.3l2.3 2.3L9.5 3.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><small class="vs-l">IA</small>Lit vos données et trouve vos blocages</span></div></div>
+      </div>
+      <div class="vs-punch">
+        <p class="vs-quote">Un logiciel gratuit, c'est comme des briques gratuites. <em>Il faut encore quelqu’un pour construire la maison.</em></p>
+        <a class="btn btn-solid" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20je%20voudrais%20voir%20ce%20que%20vous%20construiriez%20pour%20mon%20entreprise." target="_blank" rel="noopener">Voir ce que nous construirions pour vous <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
   <section class="section band" id="how" aria-labelledby="how-h">
     <div class="wrap">
       <div class="head">
@@ -854,53 +1110,6 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
           <li><h3>Formation et support</h3><p>Votre équipe apprend en pratique, et nous restons disponibles pour les mises à jour et l'aide.</p></li>
         </ol>
       </div>
-    </div>
-  </section>
-
-  <section class="section band alt" id="packages" aria-labelledby="packages-h">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Offres</span>
-        <h2 id="packages-h">Une offre pour chaque taille d'entreprise</h2>
-        <p class="lead">Chaque offre comprend une mise en place unique et un forfait mensuel pour le support et les mises à jour. Contactez-nous pour un devis adapté.</p>
-      </div>
-      <div class="packs">
-        <article class="pack">
-          <span class="id">Starter</span>
-          <h3>Pour les petites entreprises</h3>
-          <p class="for">Commerces, petits négociants et cliniques</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Modules Ventes et Stock</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Mise en place prête, lancement rapide</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Support mensuel</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20je%20souhaite%20un%20devis%20pour%20l%27offre%20Starter." target="_blank" rel="noopener">Demander un devis</a>
-        </article>
-        <article class="pack mid">
-          <span class="id">Business · la plus choisie</span>
-          <h3>Pour les entreprises en croissance</h3>
-          <p class="for">Distributeurs et sociétés de négoce</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Modules Ventes, Stock et RH</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Adapté à vos processus</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Rapports et tableaux de bord pour la direction</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Support prioritaire</li>
-          </ul>
-          <a class="btn btn-tan" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20je%20souhaite%20un%20devis%20pour%20l%27offre%20Business." target="_blank" rel="noopener">Demander un devis</a>
-        </article>
-        <article class="pack">
-          <span class="id">Pro</span>
-          <h3>Pour les industriels</h3>
-          <p class="for">Usines et sociétés de production</p>
-          <ul>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Tous les modules, entièrement sur mesure</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Planification et calcul des coûts de production</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Automatisations IA incluses</li>
-            <li><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="#0E7490" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Support dédié</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://wa.me/96181219712?text=Bonjour%20EYB%2C%20je%20souhaite%20un%20devis%20pour%20l%27offre%20Pro." target="_blank" rel="noopener">Demander un devis</a>
-        </article>
-      </div>
       <div class="trust">
         <div><svg viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8 3v6c0 4.8-3.4 8.7-8 10-4.6-1.3-8-5.2-8-10v-6z"/></svg><strong>Vos données restent les vôtres</strong><span>Accord de confidentialité signé dès le départ, et votre système tourne sur votre propre compte.</span></div>
         <div><svg viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/></svg><strong>Un vrai support</strong><span>Joignez-nous sur WhatsApp, à distance ou sur site, où que vous soyez.</span></div>
@@ -909,6 +1118,7 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
       </div>
     </div>
   </section>
+
 
   <section class="contact on-navy band-navy" id="contact" aria-labelledby="contact-h">
     <div class="wrap contact-grid">
@@ -937,7 +1147,7 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
       <p>ERP sur mesure, IA et solutions web pour les entreprises en croissance.</p>
     </div>
     <div><h4>Modules</h4><ul><li><a href="sales.html">Ventes</a></li><li><a href="stock.html">Stock</a></li><li><a href="hr.html">RH</a></li><li><a href="ai.html">IA</a></li></ul></div>
-    <div><h4>Entreprise</h4><ul><li><a href="#services">Services</a></li><li><a href="about.html">À propos</a></li><li><a href="#work">Étude de cas</a></li><li><a href="#how">Méthode</a></li><li><a href="#packages">Offres</a></li><li><a href="faq.html">FAQ</a></li><li><a href="start.html">Questionnaire projet</a></li></ul></div>
+    <div><h4>Entreprise</h4><ul><li><a href="#services">Services</a></li><li><a href="#industries">Secteurs</a></li><li><a href="about.html">À propos</a></li><li><a href="#work">Étude de cas</a></li><li><a href="#how">Méthode</a></li><li><a href="faq.html">FAQ</a></li><li><a href="start.html">Questionnaire projet</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">+961 81 219 712</a></li><li><a href="mailto:support@eybsystems.com">support@eybsystems.com</a></li><li>Liban</li></ul></div>
   </div>
   <div class="wrap legal"><span>© 2026 EYB. Tous droits réservés.</span><span class="legal-links"><a href="../privacy.html">Politique de confidentialité</a><a href="../terms.html">Conditions</a><span>eybsystems.com</span></span></div>
@@ -1019,25 +1229,15 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
   var marks = document.querySelectorAll('.pr-mark i');
   var empty = document.getElementById('prEmpty'), body = document.getElementById('prBody');
   var pkg = document.getElementById('prPkg'), why = document.getElementById('prWhy'), list = document.getElementById('prList'), send = document.getElementById('prSend');
-  var WHY = {
-    'Starter': 'Une mise en place prête pour l\'essentiel, rapide à lancer.',
-    'Business': 'Plusieurs éléments connectés, adaptés à la façon de travailler de votre équipe.',
-    'Pro': 'Un système entièrement sur mesure, avec production et automatisation intégrées.',
-    'Site web': 'Un site professionnel, prêt à être connecté à votre système plus tard.'
-  };
   function update(){
     var on = picks.filter(function(b){ return b.getAttribute('aria-pressed') === 'true'; });
     var keys = on.map(function(b){ return b.dataset.k; }), names = on.map(function(b){ return b.dataset.name; });
     for (var i = 0; i < marks.length; i++) marks[i].classList.toggle('on', i < Math.min(keys.length, 4));
     if (!keys.length){ empty.hidden = false; body.hidden = true; send.classList.add('is-off'); send.setAttribute('aria-disabled','true'); send.href = 'https://wa.me/96181219712'; return; }
-    var p;
-    if (keys.length === 1 && keys[0] === 'website') p = 'Site web';
-    else if (keys.indexOf('production') > -1 || keys.length >= 5) p = 'Pro';
-    else if (keys.length <= 2 && keys.every(function(k){ return ['sales','stock','website'].indexOf(k) > -1; })) p = 'Starter';
-    else p = 'Business';
-    empty.hidden = true; body.hidden = false; pkg.textContent = p; why.textContent = WHY[p];
+    var n = names.length;
+    empty.hidden = true; body.hidden = false; pkg.textContent = n === 1 ? '1 élément' : n + ' éléments';
     list.innerHTML = ''; names.forEach(function(n){ var li = document.createElement('li'); li.textContent = n; list.appendChild(li); });
-    var msg = 'Bonjour EYB, je souhaite construire un système avec : ' + names.join(', ') + '. Offre suggérée : ' + p + '.';
+    var msg = 'Bonjour EYB, je souhaite construire un système avec : ' + names.join(', ') + '.';
     send.href = 'https://wa.me/96181219712?text=' + encodeURIComponent(msg); send.classList.remove('is-off'); send.removeAttribute('aria-disabled');
   }
   picks.forEach(function(b){ b.addEventListener('click', function(){ b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); }); });
@@ -1085,6 +1285,80 @@ document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') document.querySelectorAll('details.lang-dd[open]').forEach(function(d){ d.removeAttribute('open'); });
 });
 </script>
+<script>
+(function(){
+  var vs = document.getElementById('vsGrid');
+  if (!vs) return;
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.vs-switch button'));
+  btns.forEach(function(b){ b.addEventListener('click', function(){
+    vs.setAttribute('data-show', b.dataset.col);
+    btns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+  }); });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  vs.classList.add('anim');
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ vs.classList.add('seen'); io.disconnect(); } }); }, {threshold: .2});
+  io.observe(vs);
+})();
+</script>
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tour-tab'));
+  if (!tabs.length) return;
+  var vid = document.getElementById('tourVideo'), ctrl = document.getElementById('tourCtrl');
+  var playBtn = document.getElementById('tcPlay'), seek = document.getElementById('tcSeek'), time = document.getElementById('tcTime');
+  var cap = document.getElementById('tourCap'), tourPane = document.getElementById('tour-p-tour');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var inView = false, userPaused = reduce, seeking = false;
+  function fmt(s){ s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
+  function sync(){
+    var d = vid.duration || 0, t = vid.currentTime || 0;
+    if (d) seek.max = d;
+    if (!seeking) seek.value = t;
+    seek.style.setProperty('--p', (d ? t / d * 100 : 0) + '%');
+    time.textContent = fmt(t) + ' / ' + (d ? fmt(d) : '0:44');
+    var p = vid.paused;
+    playBtn.classList.toggle('is-paused', p);
+    playBtn.setAttribute('aria-label', p ? ctrl.dataset.play : ctrl.dataset.pause);
+  }
+  function play(){ var pr = vid.play(); if (pr && pr.catch) pr.catch(function(){}); }
+  function auto(){ if (inView && !tourPane.hidden && !userPaused) play(); else vid.pause(); }
+  function toggle(){ if (vid.paused){ userPaused = false; play(); } else { userPaused = true; vid.pause(); } }
+  function jump(s){ var d = vid.duration || 0; vid.currentTime = Math.min(Math.max(0, vid.currentTime + s), d ? d - 0.1 : 0); sync(); }
+  function show(t){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    cap.textContent = t.dataset.cap;
+    if (vid){ ctrl.hidden = t.dataset.k !== 'tour'; auto(); }
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ show(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (document.dir === 'rtl') d = -d;
+      if (!d) return;
+      e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); show(n);
+    });
+  });
+  if (!vid) return;
+  vid.removeAttribute('controls'); ctrl.hidden = false;
+  playBtn.addEventListener('click', toggle);
+  vid.addEventListener('click', toggle);
+  document.getElementById('tcBack').addEventListener('click', function(){ jump(-5); });
+  document.getElementById('tcFwd').addEventListener('click', function(){ jump(5); });
+  seek.addEventListener('input', function(){ seeking = true; vid.currentTime = +seek.value; sync(); });
+  seek.addEventListener('change', function(){ seeking = false; });
+  ['timeupdate', 'loadedmetadata', 'play', 'pause', 'seeked'].forEach(function(ev){ vid.addEventListener(ev, sync); });
+  sync();
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ es.forEach(function(e){ inView = e.isIntersecting; auto(); }); }, {threshold: .35}).observe(vid);
+  } else { inView = true; auto(); }
+})();
+</script>
 <script src="../mobile-nav.js?v=4"></script>
+<script src="../analytics.js?v=1" defer></script>
 </body>
 </html>

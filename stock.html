@@ -512,6 +512,28 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 .lang-menu small{font-family:var(--font-mono);font-size:11px;opacity:.7}
 @media (max-width:640px){.lang-dd summary .globe{display:none}.lang-dd summary{padding:0 10px}}
 @media (max-width:480px){.cta-l{display:none}.cta-s{display:inline}.nav-cta{padding:0 14px}.nav-left{gap:12px}.nav-right{gap:8px}}
+
+/* ===== real-system screens ===== */
+.scr{background:#0F1E3D;color:#F5F8FC;position:relative;overflow:hidden}
+.scr::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(245,248,252,.07) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.scr .wrap{position:relative}
+.scr .head{margin-bottom:32px}
+.scr-tabs{display:flex;gap:8px;margin-bottom:20px;overflow-x:auto;scrollbar-width:none;padding:3px}
+.scr-tabs::-webkit-scrollbar{display:none}
+.scr-tab{all:unset;box-sizing:border-box;flex:none;cursor:pointer;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:12px;border:1px solid rgba(245,248,252,.2);color:#F5F8FC;font-weight:600;font-size:15px;white-space:nowrap;transition:background .15s ease,border-color .15s ease}
+.scr-tab:hover{background:rgba(245,248,252,.07)}
+.scr-tab:focus-visible{outline:3px solid #22D3EE;outline-offset:2px}
+.scr-tab[aria-selected="true"]{background:#22D3EE;border-color:#22D3EE;color:#0F1E3D}
+.scr-frame{background:#1B2C52;border:1px solid rgba(245,248,252,.14);border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+.scr-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(245,248,252,.1);font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+.scr-bar .lights{display:flex;gap:6px}.scr-bar .lights i{width:9px;height:9px;border-radius:50%;background:#24375F}
+.scr-view{position:relative;aspect-ratio:16/10;background:#F5F8FC}
+.scr-pane{position:absolute;inset:0}
+.scr-pane a{display:block;height:100%}
+.scr-pane img{display:block;width:100%;height:100%;object-fit:cover;object-position:top left}
+.scr-cap{margin-top:16px;font-size:16px;color:#CBD5E1;max-width:70ch}
+.scr-note{margin-top:6px;font-family:var(--font-mono);font-size:12px;color:#94A3B8}
+@media (max-width:560px){.scr-frame{border-radius:16px}.scr-tab{padding:0 14px;font-size:14px}}
 </style>
 <link rel="stylesheet" href="mobile-nav.css?v=4">
 </head>
@@ -556,6 +578,23 @@ footer .brand .tagl{color:#22D3EE;border-left-color:rgba(245,248,252,.22)}
 <div class="mrow"><span>Best supplier</span><span class="pill ok">lowest price ✓</span></div></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section scr on-navy band-navy" aria-labelledby="scr-h">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">In the real system</span>
+        <h2 id="scr-h">Your stock, item by item</h2>
+        <p class="lead">The stock catalog your team works from, and the catalogue your clients browse on a tablet in your showroom.</p>
+      </div>
+      <div class="scr-tabs" role="tablist" aria-label="Screens"><button class="scr-tab" type="button" role="tab" id="scr-t-0" aria-controls="scr-p-0" aria-selected="true" tabindex="0" data-cap="The stock catalog with every size, the quantity in stock and where it is stored.">Stock catalog</button><button class="scr-tab" type="button" role="tab" id="scr-t-1" aria-controls="scr-p-1" aria-selected="false" tabindex="-1" data-cap="For your clients: a tablet in your showroom where customers browse your products, sizes and prices.">Client catalogue</button></div>
+      <div class="scr-frame">
+        <div class="scr-bar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>eyb / demo</span><span class="live"><i class="dot"></i>live</span></div>
+        <div class="scr-view"><div class="scr-pane" id="scr-p-0" role="tabpanel" aria-labelledby="scr-t-0"><a href="media/erp-stock.webp" target="_blank" rel="noopener"><img src="media/erp-stock.webp" alt="The stock catalog with every size, the quantity in stock and where it is stored." width="1600" height="1000" loading="lazy" decoding="async"></a></div><div class="scr-pane" id="scr-p-1" role="tabpanel" aria-labelledby="scr-t-1" hidden><a href="media/erp-catalogue.webp" target="_blank" rel="noopener"><img src="media/erp-catalogue.webp" alt="For your clients: a tablet in your showroom where customers browse your products, sizes and prices." width="1600" height="1000" loading="lazy" decoding="async"></a></div></div>
+      </div>
+      <p class="scr-cap" id="scrCap" aria-live="polite">The stock catalog with every size, the quantity in stock and where it is stored.</p>
+      <p class="scr-note">Demo data: every name, company and number is made up.</p>
     </div>
   </section>
 
@@ -632,6 +671,30 @@ document.addEventListener('click', function(e){
 document.addEventListener('keydown', function(e){
   if (e.key === 'Escape') document.querySelectorAll('details.lang-dd[open]').forEach(function(d){ d.removeAttribute('open'); });
 });
+</script>
+<script>
+(function(){
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.scr-tab'));
+  if (!tabs.length) return;
+  var cap = document.getElementById('scrCap');
+  function show(t){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on ? 'true' : 'false'); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    cap.textContent = t.dataset.cap;
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ show(t); });
+    t.addEventListener('keydown', function(e){
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (document.dir === 'rtl') d = -d;
+      if (!d) return;
+      e.preventDefault(); var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); show(n);
+    });
+  });
+})();
 </script>
 <script src="mobile-nav.js?v=4"></script>
 <script src="analytics.js?v=1" defer></script>

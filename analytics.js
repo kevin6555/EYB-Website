@@ -3,7 +3,7 @@
    copy the token from the snippet it gives you, and paste it between the quotes below.
    Every page loads this file, so this is the only place to change. */
 (function () {
-  var TOKEN = '';
+  var TOKEN = 'af43e2413573461fa74c5623a208da78';
   if (!TOKEN || location.protocol === 'file:') return;
   var s = document.createElement('script');
   s.defer = true;

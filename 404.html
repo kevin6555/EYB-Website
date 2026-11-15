@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page not found | EYB</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Manrope:wght@400;600;700&family=JetBrains+Mono:wght@500;600&family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<style>
+:root{--navy:#0F1E3D;--navy-2:#1B2C52;--beige:#F5F8FC;--tan:#22D3EE;--tan-deep:#0E7490;--muted:#475569;--line:#D7E0EB;--paper:#FFFFFF;
+  --font-display:'Quicksand',system-ui,sans-serif;--font-body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;--font-ar:'IBM Plex Sans Arabic',system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--beige);color:var(--navy);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--tan);outline-offset:3px;border-radius:10px}
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.brand{display:inline-flex;align-items:center;gap:10px;padding-block:14px;text-decoration:none}
+.brand span{font-family:var(--font-display);font-weight:600;font-size:30px;letter-spacing:-.02em;line-height:1;padding-bottom:4px}
+main{flex:1;display:grid;place-items:center;padding-block:56px;position:relative;overflow:hidden}
+main::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.45;-webkit-mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 60% at 50% 40%,#000 0%,transparent 75%);pointer-events:none}
+.card{position:relative;width:100%;max-width:760px;text-align:center}
+.mark{display:inline-grid;grid-template-columns:repeat(2,48px);gap:10px;margin-bottom:28px}
+.mark i{display:block;width:48px;height:48px;border-radius:12px;background:var(--navy)}
+.mark i:nth-child(4){background:transparent;border:2px dashed var(--tan-deep);transform:rotate(14deg) translate(4px,4px)}
+.code{font-family:var(--font-mono);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--tan-deep)}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(32px,5vw,48px);line-height:1.15;letter-spacing:-.02em;margin:12px 0 0}
+.langs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px;text-align:start}
+.lang{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.lang p{margin:0;color:var(--muted);font-size:15px}
+.lang b{display:block;color:var(--navy);font-family:var(--font-display);font-size:18px;margin-bottom:4px}
+.lang[lang="ar"]{font-family:var(--font-ar)}
+.lang[lang="ar"] b{font-family:var(--font-ar)}
+.btn{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:12px;background:var(--navy);color:var(--beige);font-weight:700;font-size:15px;text-decoration:none}
+.btn:hover{background:var(--navy-2)}
+.wa{margin-top:28px;font-size:15px;color:var(--muted)}
+.wa a{color:var(--tan-deep);font-weight:600}
+@media (max-width:720px){.langs{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap"><a class="brand" href="/" aria-label="EYB home"><svg width="38" height="38" viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" rx="44" fill="#0F1E3D"/><rect x="48" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="104" y="48" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="48" y="104" width="48" height="48" rx="11" fill="#FFFFFF"/><rect x="112" y="112" width="48" height="48" rx="11" fill="#22D3EE" transform="rotate(14 136 136)"/></svg><span>eyb</span></a></div>
+</header>
+<main>
+  <div class="wrap card">
+    <div class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="code">Error 404</div>
+    <h1>This page is missing a piece.</h1>
+    <div class="langs">
+      <div class="lang" lang="en"><p><b>Page not found</b>The link may be old or mistyped.</p><a class="btn" href="/">Go to the homepage</a></div>
+      <div class="lang" lang="ar" dir="rtl"><p><b>الصفحة غير موجودة</b>قد يكون الرابط قديمًا أو مكتوبًا بشكل خاطئ.</p><a class="btn" href="/ar/">الصفحة الرئيسية</a></div>
+      <div class="lang" lang="fr"><p><b>Page introuvable</b>Le lien est peut-être ancien ou mal saisi.</p><a class="btn" href="/fr/">Retour à l’accueil</a></div>
+    </div>
+    <p class="wa">Looking for something specific? <a href="https://wa.me/96181219712" target="_blank" rel="noopener" dir="ltr">WhatsApp +961 81 219 712</a></p>
+  </div>
+</main>
+<script src="/analytics.js?v=1" defer></script>
+</body>
+</html>

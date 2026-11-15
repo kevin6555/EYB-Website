@@ -11,7 +11,7 @@
    - questionnaire_submit  the "Answer a few questions" form was sent */
 (function () {
   var CF_TOKEN = 'af43e2413573461fa74c5623a208da78';
-  var GA_ID = '';
+  var GA_ID = 'G-C4MBEHGV9Q';
   var KEY = 'eyb-analytics-consent';
 
   if (location.protocol === 'file:') return;
